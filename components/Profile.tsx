@@ -25,9 +25,12 @@ export default function Profile() {
                 Googleアカウントを「AI自動エージェント」に変える人
               </p>
               <p className="text-[#3D2B1F]/70 leading-relaxed">
-                月額課金に悩んでいた私が、GASで完全無料の自動化ツール500個を開発中。
-                <strong className="text-[#3D2B1F]"> 年間124万円のSaaSコストを¥0に </strong>
-                する方法の全てを、noteメンバー限定で公開中。
+                元々、小さな会社の経営者だった。楽楽精算、kintone、Slack、Trello、Salesforce…
+                便利なSaaSを次々と導入して、気づいたら<strong className="text-[#3D2B1F]">年間¥124万</strong>払ってた。
+                そこでGoogleスプレッドシート + GASで月額課金ツールを全部無料化。
+                <strong className="text-[#3D2B1F]">年間¥124万→¥0</strong>に。
+                この経験を、あなたにも共有したい。
+                「難しいツールを、誰でも使えるシンプルなものに。」それが俺のミッションだ。
               </p>
 
               {/* Stats */}
