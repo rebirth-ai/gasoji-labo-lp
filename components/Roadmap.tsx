@@ -17,11 +17,11 @@ export default function Roadmap() {
         </div>
 
         {/* Roadmap visual */}
-        <div className="mb-12">
+        <div className="mb-12 overflow-x-auto">
           <img
             src="/roadmap.png"
             alt="500ツールへの道のり - 段階的値上げロードマップ"
-            className="w-full rounded-2xl shadow-lg border border-[#FF6B35]/10"
+            className="w-full min-w-[600px] rounded-2xl shadow-lg border border-[#FF6B35]/10 object-contain"
           />
         </div>
 
