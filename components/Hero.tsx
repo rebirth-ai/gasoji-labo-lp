@@ -102,8 +102,8 @@ export default function Hero() {
           </div>
 
           {/* RIGHT: Device mockup */}
-          <div className="relative order-1 flex items-center justify-center lg:order-2 overflow-visible py-8">
-            <div className="relative w-[80%] max-w-md mx-auto">
+          <div className="relative order-1 flex items-center justify-center lg:order-2 py-8">
+            <div className="relative w-[75%] max-w-[380px] mx-auto">
               {/* PC mockup with subtle perspective */}
               <div
                 className="relative rounded-2xl bg-[#1a1a2e] p-2 shadow-[0_20px_60px_rgba(0,0,0,0.15)] ring-1 ring-black/5"
