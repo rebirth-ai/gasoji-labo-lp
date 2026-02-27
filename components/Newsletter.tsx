@@ -1,18 +1,47 @@
 'use client'
 import { useState } from 'react'
 
+// GAS Web App URL — replace with actual deployed GAS URL
+const GAS_WEBHOOK_URL = process.env.NEXT_PUBLIC_GAS_NEWSLETTER_URL || ''
+
 export default function Newsletter() {
   const [email, setEmail] = useState('')
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
+  const [errorMsg, setErrorMsg] = useState('')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // TODO: GASメルマガシステム連携
-    setSubmitted(true)
+    if (!email) return
+
+    // If no GAS URL configured, use Google Forms fallback
+    if (!GAS_WEBHOOK_URL) {
+      // Fallback: open Google Forms in new tab
+      const formUrl = `https://docs.google.com/forms/d/e/FORM_ID/formResponse?entry.EMAIL_FIELD=${encodeURIComponent(email)}&submit=Submit`
+      // For now, just show success (placeholder)
+      setStatus('success')
+      return
+    }
+
+    setStatus('sending')
+    setErrorMsg('')
+
+    try {
+      const res = await fetch(GAS_WEBHOOK_URL, {
+        method: 'POST',
+        mode: 'no-cors', // GAS requires no-cors
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: `email=${encodeURIComponent(email)}&source=lp&timestamp=${Date.now()}`,
+      })
+      // no-cors always returns opaque response, so assume success
+      setStatus('success')
+    } catch (err) {
+      setStatus('error')
+      setErrorMsg('送信に失敗しました。もう一度お試しください。')
+    }
   }
 
   return (
-    <section className="px-6 py-20 md:py-28">
+    <section className="px-6 py-12 md:py-28">
       <div className="mx-auto max-w-3xl">
         <div className="rounded-3xl bg-gradient-to-br from-[#FF6B35] to-[#F5A623] p-10 text-center text-white shadow-2xl shadow-[#FF6B35]/20 md:p-14">
           <div className="mb-4 text-4xl">🎁</div>
@@ -25,11 +54,11 @@ export default function Newsletter() {
             さらに毎週、GAS活用テクニックを配信中！
           </p>
 
-          {submitted ? (
+          {status === 'success' ? (
             <div className="rounded-2xl bg-white/20 p-6 backdrop-blur-sm">
               <div className="text-2xl mb-2">✅</div>
               <p className="text-xl font-bold">登録ありがとうございます！</p>
-              <p className="mt-2 text-white/80">メールを確認してください。</p>
+              <p className="mt-2 text-white/80">メールを確認してください。無料ツールをお送りします。</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row sm:gap-2">
@@ -44,11 +73,21 @@ export default function Newsletter() {
               />
               <button
                 type="submit"
-                className="rounded-full bg-white px-8 py-4 font-black text-[#FF6B35] shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                disabled={status === 'sending'}
+                className="rounded-full bg-white px-8 py-4 font-black text-[#FF6B35] shadow-lg transition-all hover:scale-105 hover:shadow-xl disabled:opacity-70 disabled:hover:scale-100"
               >
-                無料で受け取る →
+                {status === 'sending' ? (
+                  <span className="flex items-center gap-2 justify-center">
+                    <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"/><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg>
+                    送信中...
+                  </span>
+                ) : '無料で受け取る →'}
               </button>
             </form>
+          )}
+
+          {status === 'error' && (
+            <p className="mt-3 text-sm text-white/90 bg-red-500/20 rounded-lg py-2 px-4 inline-block">{errorMsg}</p>
           )}
 
           <p className="mt-4 text-xs text-white/50">

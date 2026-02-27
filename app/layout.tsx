@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://yuyukuma-blog.com'),
   title: 'GASおじラボ｜GASツール500個で月額SaaSを完全置換',
   description: 'Google Apps Scriptで年間124万円のSaaS費用を削減。月額980円で500ツール使い放題。早期加入で永久据え置き。',
   openGraph: {

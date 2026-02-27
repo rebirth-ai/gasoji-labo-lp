@@ -1,6 +1,6 @@
 export default function Profile() {
   return (
-    <section className="px-6 py-20 md:py-28 bg-white">
+    <section className="px-6 py-12 md:py-28 bg-white">
       <div className="mx-auto max-w-4xl">
         <div className="rounded-3xl bg-[#FFF8F0] p-8 border border-[#FF6B35]/10 md:p-12">
           <div className="flex flex-col md:flex-row items-center gap-8">

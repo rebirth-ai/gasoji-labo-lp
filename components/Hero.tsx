@@ -22,7 +22,7 @@ const IconZap = () => (
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#0a0a1a] px-6 pt-28 pb-24 md:px-12 lg:px-16 xl:px-20">
+    <section className="relative min-h-screen overflow-hidden bg-[#0a0a1a] px-6 pt-24 pb-16 md:pt-28 md:pb-24 md:px-12 lg:px-16 xl:px-20">
       {/* Animated background glows */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-[#FF6B35]/15 blur-[120px] animate-pulse-glow" />
@@ -35,7 +35,7 @@ export default function Hero() {
 
           {/* LEFT: Text */}
           <div className="order-2 lg:order-1 relative z-10">
-            <p className="mb-4 text-sm font-bold tracking-[0.2em] text-[#FF6B35] uppercase">
+            <p className="mb-4 text-sm font-bold tracking-[0.1em] text-[#FF6B35] uppercase">
               初期費用 & 追加コスト ¥0
             </p>
 
@@ -94,7 +94,7 @@ export default function Hero() {
 
           {/* RIGHT: Hero image — FREE from mockup, full impact */}
           <div className="relative order-1 lg:order-2 flex items-center justify-center overflow-visible">
-            <div className="relative w-full max-w-xl">
+            <div className="relative w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-xl">
               {/* Main hero image — large, no mockup frame, just the image with glow */}
               <div className="relative">
                 {/* Glow behind image */}

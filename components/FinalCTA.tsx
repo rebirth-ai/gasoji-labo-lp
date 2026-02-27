@@ -1,6 +1,6 @@
 export default function FinalCTA() {
   return (
-    <section className="px-6 py-20 md:py-28 bg-white">
+    <section className="px-6 py-12 md:py-28 bg-white">
       <div className="mx-auto max-w-4xl">
         <div className="rounded-[2rem] bg-gradient-to-br from-[#FFF8F0] to-white p-12 text-center shadow-2xl border border-[#FF6B35]/10 md:p-16">
           <h2 className="mb-6 text-4xl font-black leading-tight md:text-5xl">
