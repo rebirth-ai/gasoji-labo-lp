@@ -74,21 +74,18 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* Achievement badges */}
-            <div className="flex flex-wrap items-center gap-3">
-              {[
-                { icon: <IconChart />, label: '開発予定', value: '500ツール' },
-                { icon: <svg className="w-4 h-4 text-[#FF6B35]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>, label: '年間削減', value: '¥124万' },
-                { icon: <svg className="w-4 h-4 text-[#FF6B35]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>, label: 'ドキュメント', value: '172本' },
-              ].map((b) => (
-                <div key={b.value} className="flex items-center gap-2 rounded-full bg-white/8 backdrop-blur-sm px-4 py-2 border border-white/10">
-                  {b.icon}
-                  <div>
-                    <div className="text-[10px] font-bold text-[#FF6B35]">{b.label}</div>
-                    <div className="text-xs font-black text-white">{b.value}</div>
-                  </div>
-                </div>
-              ))}
+            {/* Achievement badges — 2 stats side by side, larger */}
+            <div className="grid grid-cols-2 gap-3 max-w-xs">
+              <div className="rounded-2xl bg-white/8 backdrop-blur-sm px-5 py-4 border border-white/10 text-center">
+                <div className="flex justify-center mb-1"><IconChart /></div>
+                <div className="text-2xl font-black text-white">500<span className="text-base">ツール</span></div>
+                <div className="text-xs font-bold text-[#FF6B35]">開発予定</div>
+              </div>
+              <div className="rounded-2xl bg-white/8 backdrop-blur-sm px-5 py-4 border border-white/10 text-center">
+                <div className="flex justify-center mb-1"><svg className="w-5 h-5 text-[#FF6B35]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
+                <div className="text-2xl font-black text-white">¥124<span className="text-base">万</span></div>
+                <div className="text-xs font-bold text-[#FF6B35]">年間削減額</div>
+              </div>
             </div>
           </div>
 
