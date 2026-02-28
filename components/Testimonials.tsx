@@ -49,21 +49,21 @@ const TESTIMONIALS = [
 
 export default function Testimonials() {
   return (
-    <section className="px-6 py-14 md:py-32 bg-[#1a1a2e]">
+    <section className="px-6 py-14 md:py-32 bg-gray-50">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center">
           <p className="mb-3 text-sm font-bold tracking-[0.1em] text-[#FF6B35] uppercase">ユーザーの声</p>
           <h2 className="mb-4 text-4xl font-black text-white md:text-5xl">
             導入者の<span className="text-[#FF6B35]">リアルな声</span>
           </h2>
-          <p className="text-base text-white/70">実際にGASツールを使っている方々の体験談</p>
+          <p className="text-base text-gray-600">実際にGASツールを使っている方々の体験談</p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
           {TESTIMONIALS.map((t) => (
             <div
               key={t.name}
-              className="group relative rounded-2xl bg-slate-800/90 p-8 border border-white/[0.3] transition-all duration-300 hover:bg-white/8 hover:-translate-y-1"
+              className="group relative rounded-2xl bg-white p-8 border border-gray-200 transition-all duration-300 hover:bg-gray-100 hover:-translate-y-1"
             >
               {/* Metric badge */}
               <div className="mb-5 flex items-center gap-3">
@@ -73,7 +73,7 @@ export default function Testimonials() {
                   </svg>
                   <span className="text-xs font-bold text-[#FF6B35]">{t.metric}</span>
                 </div>
-                <span className="text-[10px] text-white/70">{t.metricDetail}</span>
+                <span className="text-[10px] text-gray-600">{t.metricDetail}</span>
               </div>
 
               {/* Stars */}
@@ -86,18 +86,18 @@ export default function Testimonials() {
               </div>
 
               {/* Quote */}
-              <p className="mb-6 text-base leading-relaxed text-white/70">
+              <p className="mb-6 text-base leading-relaxed text-gray-600">
                 &ldquo;{t.quote}&rdquo;
               </p>
 
               {/* Author */}
-              <div className="flex items-center gap-3 pt-4 border-t border-white/10">
+              <div className="flex items-center gap-3 pt-4 border-t border-gray-200">
                 {/* Avatar with fallback */}
                 <div className="relative h-12 w-12 shrink-0">
                   <img
                     src={t.avatar}
                     alt={t.name}
-                    className="h-12 w-12 rounded-full object-cover border-2 border-white/40 shadow-lg bg-white/20 brightness-110"
+                    className="h-12 w-12 rounded-full object-cover object-top border-2 border-gray-300 shadow-md"
                     onError={(e) => {
                       const el = e.currentTarget;
                       el.style.display = 'none';
@@ -113,8 +113,8 @@ export default function Testimonials() {
                   </div>
                 </div>
                 <div>
-                  <div className="text-sm font-bold text-white">{t.name}</div>
-                  <div className="text-xs text-white/60">{t.role}</div>
+                  <div className="text-sm font-bold text-gray-900">{t.name}</div>
+                  <div className="text-xs text-gray-500">{t.role}</div>
                 </div>
               </div>
             </div>
