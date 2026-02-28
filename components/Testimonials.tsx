@@ -97,7 +97,7 @@ export default function Testimonials() {
                   <img
                     src={t.avatar}
                     alt={t.name}
-                    className="h-12 w-12 rounded-full object-cover border-2 border-white/40 shadow-lg bg-white/20 brightness-110"
+                    className="h-12 w-12 rounded-full object-cover object-center border-2 border-white/50 shadow-lg"
                     onError={(e) => {
                       const el = e.currentTarget;
                       el.style.display = 'none';
