@@ -12,7 +12,9 @@ export default function Footer() {
             <a href="https://x.com/yuyukuma0810" className="text-white/60 hover:text-white transition-colors" aria-label="X">
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
-            <a href="https://note.com/yuyukuma_gasoji" className="text-sm font-medium text-white/60 hover:text-[#FF6B35] transition-colors">note</a>
+            <a href="https://note.com/yuyukuma_gasoji" className="text-white/60 hover:text-white transition-colors" aria-label="note">
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#41C9B4"/><path d="M7 8.5h7m-7 3.5h10m-10 3.5h5" stroke="#fff" strokeWidth="1.8" strokeLinecap="round"/></svg>
+            </a>
             <a href="https://note.com/yuyukuma_gasoji/membership" className="text-sm font-medium text-white/60 hover:text-[#FF6B35] transition-colors flex items-center gap-1">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 2a1 1 0 01.832.445l1.96 2.94 3.467.694a1 1 0 01.62 1.56l-2.318 2.783.327 3.515a1 1 0 01-1.32 1.07L10 13.462l-3.568 1.545a1 1 0 01-1.32-1.07l.327-3.515L3.121 7.64a1 1 0 01.62-1.56l3.467-.695 1.96-2.94A1 1 0 0110 2z" clipRule="evenodd"/></svg>
               メンバーシップ
