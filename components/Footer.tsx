@@ -18,8 +18,15 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 text-center text-sm text-white/30">
-          © 2026 yuyukuma | Googleアカウントを「AI自動エージェント」に変える人
+        <div className="mt-6 flex flex-wrap justify-center gap-4 text-xs text-white/30">
+          <a href="/privacy" className="hover:text-white/50 transition-colors">プライバシーポリシー</a>
+          <span>|</span>
+          <a href="/tokushoho" className="hover:text-white/50 transition-colors">特定商取引法に基づく表記</a>
+          <span>|</span>
+          <a href="mailto:contact@yuyukuma-blog.com" className="hover:text-white/50 transition-colors">お問い合わせ</a>
+        </div>
+        <div className="mt-4 text-center text-sm text-white/30">
+          © 2026 ゆゆくま（GASおじ） | Googleアカウントを「AI自動エージェント」に変える人
         </div>
       </div>
     </footer>
