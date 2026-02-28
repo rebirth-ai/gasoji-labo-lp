@@ -44,7 +44,7 @@ export default function Home() {
         <p className="text-3xl font-black md:text-4xl mb-4">今なら月額<span className="text-white">¥980</span></p>
         <a
           href="https://note.com/yuyukuma_gasoji/membership"
-          className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3 text-sm font-black text-[#FF6B35] shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+          className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-lg bg-white px-8 py-3 text-sm font-black text-[#FF6B35] shadow-lg transition-all hover:scale-105 hover:shadow-xl"
         >
           <span className="sm:hidden">今すぐ参加 →</span><span className="hidden sm:inline">メンバーシップに参加 →</span>
         </a>

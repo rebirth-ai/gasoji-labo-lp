@@ -56,10 +56,10 @@ export default function Hero() {
             </p>
 
             {/* CTA */}
-            <div className="mb-10 flex flex-wrap gap-3">
+            <div className="mb-10 flex flex-col sm:flex-row gap-3">
               <a
                 href="https://note.com/yuyukuma_gasoji/membership"
-                className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#FF6B35] to-[#F5A623] px-8 py-4 text-sm font-black text-white shadow-lg shadow-[#FF6B35]/25 transition-all duration-300 hover:shadow-2xl hover:shadow-[#FF6B35]/40 hover:-translate-y-1 hover:scale-[1.02]"
+                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#FF6B35] to-[#F5A623] px-8 py-4 text-sm font-black text-white shadow-lg shadow-[#FF6B35]/25 transition-all duration-300 hover:shadow-2xl hover:shadow-[#FF6B35]/40 hover:-translate-y-1 hover:scale-[1.02]"
               >
                 月額980円で始める
                 <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -68,7 +68,7 @@ export default function Hero() {
               </a>
               <a
                 href="#tools"
-                className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 backdrop-blur-sm px-8 py-4 text-sm font-bold text-white/70 transition-all duration-300 hover:bg-white/10 hover:text-white hover:-translate-y-1"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 backdrop-blur-sm px-8 py-4 text-sm font-bold text-white/70 transition-all duration-300 hover:bg-white/10 hover:text-white hover:-translate-y-1"
               >
                 ツール一覧を見る
               </a>
