@@ -2,7 +2,7 @@ export default function BeforeAfter() {
   return (
     <section className="px-6 py-12 md:py-28">
       <div className="mx-auto max-w-7xl">
-        <h2 className="mb-16 text-center text-4xl font-black md:text-5xl">
+        <h2 className="mb-16 text-center text-2xl font-black sm:text-4xl md:text-5xl whitespace-nowrap">
           月額課金 <span className="text-[#FF6B35]">vs</span> GAS無料化
         </h2>
 

@@ -28,7 +28,7 @@ export default function FinalCTA() {
             href="https://note.com/yuyukuma_gasoji/membership"
             className="group inline-flex items-center justify-center gap-4 rounded-full bg-gradient-to-r from-[#FF6B35] to-[#F5A623] px-12 py-6 text-xl font-black text-white shadow-xl shadow-[#FF6B35]/25 transition-all hover:scale-105 hover:shadow-2xl"
           >
-            noteメンバーシップに参加
+            <span className="sm:hidden">今すぐ参加</span><span className="hidden sm:inline">noteメンバーシップに参加</span>
             <svg className="w-6 h-6 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

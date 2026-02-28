@@ -36,9 +36,9 @@ export default function Profile() {
               {/* Stats */}
               <div className="mt-6 flex justify-center gap-6 md:justify-start">
                 {[
-                  { value: '500+', label: 'ツール' },
-                  { value: '6日', label: '開発期間' },
-                  { value: '¥0', label: 'コスト' },
+                  { value: '500+', label: '開発予定ツール' },
+                  { value: '¥124万', label: '年間削減額' },
+                  { value: '¥0', label: '初期費用' },
                 ].map((stat) => (
                   <div key={stat.label} className="text-center">
                     <div className="text-2xl font-black text-[#FF6B35]">{stat.value}</div>

@@ -79,7 +79,7 @@ export default function ToolDashboard() {
   const comingCount = TOOLS.filter(t => t.status === 'coming').length
 
   return (
-    <section id="tools" className="px-6 py-20 md:py-28 bg-[#FAFAF8]">
+    <section id="tools" className="px-4 sm:px-6 py-12 md:py-28 bg-[#FAFAF8]">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-4xl font-black md:text-5xl">
@@ -115,12 +115,12 @@ export default function ToolDashboard() {
         </div>
 
         {/* Category tabs */}
-        <div className="mb-8 flex flex-wrap justify-center gap-2">
+        <div className="mb-8 flex flex-wrap justify-center gap-1.5 sm:gap-2">
           {CATEGORIES.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
+              className={`rounded-full px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm font-medium transition-all ${
                 activeCategory === cat.id
                   ? 'bg-[#FF6B35] text-white shadow-lg shadow-[#FF6B35]/30'
                   : 'bg-white text-[#3D2B1F]/50 hover:bg-white/20 border border-[#3D2B1F]/8'

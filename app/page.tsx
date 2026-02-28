@@ -46,7 +46,7 @@ export default function Home() {
           href="https://note.com/yuyukuma_gasoji/membership"
           className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3 text-sm font-black text-[#FF6B35] shadow-lg transition-all hover:scale-105 hover:shadow-xl"
         >
-          メンバーシップに参加 →
+          <span className="sm:hidden">今すぐ参加 →</span><span className="hidden sm:inline">メンバーシップに参加 →</span>
         </a>
       </div>
 
