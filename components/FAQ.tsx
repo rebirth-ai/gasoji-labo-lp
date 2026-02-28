@@ -44,17 +44,17 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section id="faq" className="px-6 py-12 md:py-28 bg-white">
+    <section id="faq" className="px-6 py-12 md:py-28 bg-[#0f0f23]">
       <div className="mx-auto max-w-3xl">
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-4xl font-black text-gray-900 md:text-5xl">
+          <h2 className="mb-4 text-4xl font-black text-white md:text-5xl">
             よくある<span className="text-[#FF6B35]">質問</span>
           </h2>
         </div>
 
         <div className="space-y-3">
           {FAQS.map((faq, i) => (
-            <div key={i} className="rounded-2xl bg-white border border-gray-200 overflow-hidden">
+            <div key={i} className="rounded-2xl bg-slate-800/90 border border-white/[0.3] overflow-hidden">
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="flex w-full items-center justify-between p-6 text-left"
@@ -62,7 +62,7 @@ export default function FAQ() {
                 aria-controls={`faq-answer-${i}`}
                 id={`faq-trigger-${i}`}
               >
-                <span className="pr-4 text-lg font-bold text-gray-900">{faq.q}</span>
+                <span className="pr-4 text-lg font-bold text-white">{faq.q}</span>
                 <svg
                   className={`h-5 w-5 flex-shrink-0 text-[#FF6B35] transition-transform ${openIndex === i ? 'rotate-180' : ''}`}
                   fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -72,12 +72,12 @@ export default function FAQ() {
               </button>
               {openIndex === i && (
                 <div
-                  className="border-t border-gray-200 px-6 pb-6 pt-4"
+                  className="border-t border-white/10 px-6 pb-6 pt-4"
                   id={`faq-answer-${i}`}
                   role="region"
                   aria-labelledby={`faq-trigger-${i}`}
                 >
-                  <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+                  <p className="text-white/70 leading-relaxed">{faq.a}</p>
                 </div>
               )}
             </div>
