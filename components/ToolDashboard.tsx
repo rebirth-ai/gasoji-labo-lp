@@ -66,6 +66,7 @@ const TOOLS = [
 export default function ToolDashboard() {
   const [activeCategory, setActiveCategory] = useState('all')
   const [search, setSearch] = useState('')
+  const [showAll, setShowAll] = useState(false)
 
   const filteredTools = useMemo(() => {
     return TOOLS.filter((tool) => {
@@ -133,7 +134,7 @@ export default function ToolDashboard() {
 
         {/* Tool grid */}
         <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-          {filteredTools.map((tool) => (
+          {(showAll ? filteredTools : filteredTools.slice(0, 8)).map((tool) => (
             <div
               key={tool.name}
               className="group rounded-2xl bg-white/[0.08] p-6 border border-white/[0.15] transition-all hover:bg-white/10 hover:border-[#FF6B35]/30 hover:-translate-y-1"
@@ -156,6 +157,16 @@ export default function ToolDashboard() {
           ))}
         </div>
 
+        {!showAll && filteredTools.length > 8 && (
+          <div className="mt-6 text-center">
+            <button
+              onClick={() => setShowAll(true)}
+              className="rounded-full bg-[#FF6B35] px-8 py-3 text-sm font-bold text-white shadow-lg shadow-[#FF6B35]/20 transition-all hover:scale-105 hover:shadow-xl"
+            >
+              残り{filteredTools.length - 8}ツールを表示 ↓
+            </button>
+          </div>
+        )}
         <p className="mt-8 text-center text-sm text-white/30">
           + 他{TOTAL_TOOLS - TOOLS.length}以上のツールがnoteメンバー限定で順次公開
         </p>
