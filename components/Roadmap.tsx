@@ -92,12 +92,15 @@ export default function Roadmap() {
           </div>
         </div>
 
-        {/* RPG Illustration */}
-        <div className="mb-16 overflow-hidden rounded-2xl border border-white/[0.3]">
+        {/* RPG Illustration — 透過で背景に馴染ませる */}
+        <div className="relative mb-16 -mx-6 md:-mx-12">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a2e] via-transparent to-[#1a1a2e] z-10 pointer-events-none" />
+          <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#1a1a2e] to-transparent z-10" />
+          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#1a1a2e] to-transparent z-10" />
           <img
             src="/roadmap-illustration.png"
-            alt="500ツールへの冒険マップ — ゆゆくまが10→50→100→200→500ツールへ進む"
-            className="w-full h-auto"
+            alt="500ツールへの冒険マップ"
+            className="w-full h-auto opacity-60"
           />
         </div>
 
