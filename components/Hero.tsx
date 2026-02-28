@@ -75,7 +75,7 @@ export default function Hero() {
             </div>
 
             {/* Achievement badges — 2 stats side by side, larger */}
-            <div className="grid grid-cols-2 gap-3 max-w-xs">
+            <div className="grid grid-cols-2 gap-3 max-w-xs mx-auto lg:mx-0">
               <div className="rounded-2xl bg-white/8 backdrop-blur-sm px-5 py-4 border border-white/10 text-center">
                 <div className="flex justify-center mb-1"><IconChart /></div>
                 <div className="text-2xl font-black text-white">500<span className="text-base">ツール</span></div>
