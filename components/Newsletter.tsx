@@ -48,25 +48,31 @@ export default function Newsletter() {
           <h2 className="mb-4 mt-4 text-3xl font-black md:text-4xl">
             無料GASツールをプレゼント！
           </h2>
-          <div className="mb-6 mx-auto max-w-md text-left space-y-2">
-            <div className="flex items-center gap-2 text-white/90">
-              <span className="text-lg">🎁</span>
-              <span className="font-bold">X自動投稿ツール</span>
-              <span className="text-xs bg-white/20 rounded-full px-2 py-0.5">登録直後にお届け</span>
+          <div className="mb-6 mx-auto max-w-sm text-left space-y-3">
+            <div className="flex gap-3 items-start text-white/90">
+              <span className="text-xl flex-shrink-0 mt-0.5">🎁</span>
+              <div>
+                <div className="font-bold text-sm sm:text-base">X自動投稿ツール</div>
+                <span className="text-[10px] sm:text-xs bg-white/20 rounded-full px-2 py-0.5 mt-1 inline-block">登録直後にお届け</span>
+              </div>
             </div>
-            <div className="flex items-center gap-2 text-white/90">
-              <span className="text-lg">🎁</span>
-              <span className="font-bold">GAS経費精算ツール</span>
-              <span className="text-xs bg-white/20 rounded-full px-2 py-0.5">翌日お届け</span>
+            <div className="flex gap-3 items-start text-white/90">
+              <span className="text-xl flex-shrink-0 mt-0.5">🎁</span>
+              <div>
+                <div className="font-bold text-sm sm:text-base">GAS経費精算ツール</div>
+                <span className="text-[10px] sm:text-xs bg-white/20 rounded-full px-2 py-0.5 mt-1 inline-block">翌日お届け</span>
+              </div>
             </div>
-            <div className="flex items-center gap-2 text-white/90">
-              <span className="text-lg">🎁</span>
-              <span className="font-bold">メルマガ限定の特別ツール</span>
-              <span className="text-xs bg-red-500/40 rounded-full px-2 py-0.5">noteにはない特典！</span>
+            <div className="flex gap-3 items-start text-white/90">
+              <span className="text-xl flex-shrink-0 mt-0.5">🎁</span>
+              <div>
+                <div className="font-bold text-sm sm:text-base">メルマガ限定の特別ツール</div>
+                <span className="text-[10px] sm:text-xs bg-red-500/40 rounded-full px-2 py-0.5 mt-1 inline-block">noteにはない特典！</span>
+              </div>
             </div>
-            <div className="flex items-center gap-2 text-white/70">
-              <span className="text-lg">📧</span>
-              <span>毎日19時にGAS活用情報をお届け</span>
+            <div className="flex gap-3 items-start text-white/70">
+              <span className="text-xl flex-shrink-0 mt-0.5">📧</span>
+              <div className="text-sm sm:text-base">毎日19時にGAS活用情報をお届け</div>
             </div>
           </div>
 
