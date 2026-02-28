@@ -58,7 +58,7 @@ export default function Roadmap() {
         </div>
 
         {/* Price step bar */}
-        <div className="mb-16 rounded-2xl bg-white/[0.22] border border-white/[0.3] p-6 md:p-8">
+        <div className="mb-16 rounded-2xl bg-slate-800/90 border border-white/[0.3] p-6 md:p-8">
           <p className="mb-4 text-center text-sm font-bold text-white/50 tracking-wide">段階的値上げスケジュール</p>
           <div className="flex items-center justify-between gap-1">
             {PRICE_STEPS.map((s, i) => (
@@ -94,13 +94,12 @@ export default function Roadmap() {
 
         {/* RPG Illustration — 透過で背景に馴染ませる */}
         <div className="relative mb-16 -mx-6 md:-mx-12">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a2e] via-transparent to-[#1a1a2e] z-10 pointer-events-none" />
-          <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#1a1a2e] to-transparent z-10" />
-          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#1a1a2e] to-transparent z-10" />
+          <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#1a1a2e] to-transparent z-10" />
+          <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#1a1a2e] to-transparent z-10" />
           <img
             src="/roadmap-illustration.png"
             alt="500ツールへの冒険マップ"
-            className="w-full h-auto opacity-60"
+            className="w-full h-auto opacity-90"
           />
         </div>
 
@@ -127,7 +126,7 @@ export default function Roadmap() {
                 <div className={`rounded-2xl p-6 transition-all duration-300 hover:shadow-lg ${
                   item.status === 'active'
                     ? 'bg-gradient-to-br from-[#FF6B35]/5 to-[#F5A623]/5 border-2 border-[#FF6B35]/20 shadow-md'
-                    : 'bg-white/[0.22] border border-white/[0.3]'
+                    : 'bg-slate-800/90 border border-white/[0.3]'
                 }`}>
                   <div className="mb-3 flex items-center gap-2 flex-wrap">
                     <span className={`rounded-full px-3 py-1 text-xs font-bold ${

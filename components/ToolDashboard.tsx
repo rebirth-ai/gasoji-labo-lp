@@ -98,6 +98,13 @@ export default function ToolDashboard() {
           </div>
         </div>
 
+        {/* Tool showcase illustration — 透過で背景に馴染ませる */}
+        <div className="relative mb-12 -mx-4 sm:-mx-6">
+          <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#0f0f23] to-transparent z-10" />
+          <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#0f0f23] to-transparent z-10" />
+          <img src="/tools-showcase.png" alt="GASツールショーケース" className="w-full max-w-3xl mx-auto h-auto opacity-80" />
+        </div>
+
         {/* Search */}
         <div className="mb-8 flex justify-center">
           <div className="relative w-full max-w-md">
@@ -137,7 +144,7 @@ export default function ToolDashboard() {
           {(showAll ? filteredTools : filteredTools.slice(0, 8)).map((tool) => (
             <div
               key={tool.name}
-              className="group rounded-2xl bg-white/[0.22] p-6 border border-white/[0.3] transition-all hover:bg-white/20 hover:border-[#FF6B35]/30 hover:-translate-y-1"
+              className="group rounded-2xl bg-slate-800/90 p-6 border border-white/[0.3] transition-all hover:bg-white/20 hover:border-[#FF6B35]/30 hover:-translate-y-1"
             >
               <div className="mb-3 flex items-center justify-between">
                 <span className="text-3xl">{tool.emoji}</span>
