@@ -79,28 +79,28 @@ export default function ToolDashboard() {
   const comingCount = TOOLS.filter(t => t.status === 'coming').length
 
   return (
-    <section id="tools" className="px-4 sm:px-6 py-12 md:py-28 bg-[#FAFAF8]">
+    <section id="tools" className="px-4 sm:px-6 py-12 md:py-28 bg-[#0f0f23]">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-4xl font-black md:text-5xl">
+          <h2 className="mb-4 text-4xl font-black text-white md:text-5xl">
             {TOTAL_TOOLS}個の無料ツールで
             <br />
             <span className="text-[#FF6B35]">何ができる？</span>
           </h2>
-          <p className="text-lg text-[#3D2B1F]/50">
+          <p className="text-lg text-white/50">
             全てGoogle Apps Script（GAS）で動く。サーバー代も月額課金もゼロ。
           </p>
           <div className="mt-4 flex justify-center gap-4 text-sm">
             <span className="rounded-full bg-green-50 text-green-600 px-3 py-1 font-bold">✅ {publishedCount}ツール公開中</span>
             <span className="rounded-full bg-[#FF6B35]/10 text-[#FF6B35] px-3 py-1 font-bold">🔜 {comingCount}ツール開発中</span>
-            <span className="rounded-full bg-white text-[#3D2B1F]/50 px-3 py-1 font-bold">🎯 目標 {TOTAL_TOOLS}ツール</span>
+            <span className="rounded-full bg-white/10 text-white/50 px-3 py-1 font-bold">🎯 目標 {TOTAL_TOOLS}ツール</span>
           </div>
         </div>
 
         {/* Search */}
         <div className="mb-8 flex justify-center">
           <div className="relative w-full max-w-md">
-            <svg className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-[#3D2B1F]/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
             <input
@@ -109,7 +109,7 @@ export default function ToolDashboard() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               aria-label="ツール名で検索"
-              className="w-full rounded-full border border-[#3D2B1F]/10 bg-white py-3 pl-12 pr-4 text-sm text-[#3D2B1F] placeholder-[#3D2B1F]/30 outline-none focus:border-[#FF6B35] focus:ring-2 focus:ring-[#FF6B35]/20"
+              className="w-full rounded-full border border-white/10 bg-white/5 py-3 pl-12 pr-4 text-sm text-white placeholder-white/30 outline-none focus:border-[#FF6B35] focus:ring-2 focus:ring-[#FF6B35]/20"
             />
           </div>
         </div>
@@ -123,7 +123,7 @@ export default function ToolDashboard() {
               className={`rounded-full px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm font-medium transition-all ${
                 activeCategory === cat.id
                   ? 'bg-[#FF6B35] text-white shadow-lg shadow-[#FF6B35]/30'
-                  : 'bg-white text-[#3D2B1F]/50 hover:bg-white/20 border border-[#3D2B1F]/8'
+                  : 'bg-white/5 text-white/50 hover:bg-white/10 border border-white/10'
               }`}
             >
               {cat.emoji} {cat.name}
@@ -136,7 +136,7 @@ export default function ToolDashboard() {
           {filteredTools.map((tool) => (
             <div
               key={tool.name}
-              className="group rounded-2xl bg-white p-6 border border-[#3D2B1F]/8 transition-all hover:bg-white hover:border-[#FF6B35]/30 hover:-translate-y-1"
+              className="group rounded-2xl bg-white/5 p-6 border border-white/8 transition-all hover:bg-white/10 hover:border-[#FF6B35]/30 hover:-translate-y-1"
             >
               <div className="mb-3 flex items-center justify-between">
                 <span className="text-3xl">{tool.emoji}</span>
@@ -150,13 +150,13 @@ export default function ToolDashboard() {
                   {tool.status === 'published' ? '✅ 公開中' : '🔜 近日公開'}
                 </span>
               </div>
-              <h3 className="mb-1 text-lg font-black text-[#3D2B1F]">{tool.name}</h3>
-              <p className="text-sm text-[#3D2B1F]/50">{tool.desc}</p>
+              <h3 className="mb-1 text-lg font-black text-white">{tool.name}</h3>
+              <p className="text-sm text-white/50">{tool.desc}</p>
             </div>
           ))}
         </div>
 
-        <p className="mt-8 text-center text-sm text-[#3D2B1F]/30">
+        <p className="mt-8 text-center text-sm text-white/30">
           + 他{TOTAL_TOOLS - TOOLS.length}以上のツールがnoteメンバー限定で順次公開
         </p>
       </div>

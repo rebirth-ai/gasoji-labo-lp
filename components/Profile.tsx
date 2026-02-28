@@ -1,8 +1,8 @@
 export default function Profile() {
   return (
-    <section className="px-6 py-12 md:py-28 bg-white">
+    <section className="px-6 py-12 md:py-28 bg-[#0f0f23]">
       <div className="mx-auto max-w-4xl">
-        <div className="rounded-3xl bg-[#FFF8F0] p-8 border border-[#FF6B35]/10 md:p-12">
+        <div className="rounded-3xl bg-white/5 p-8 border border-white/10 md:p-12">
           <div className="flex flex-col md:flex-row items-center gap-8">
             {/* Avatar */}
             <div className="relative flex-shrink-0">
@@ -16,17 +16,17 @@ export default function Profile() {
 
             {/* Info */}
             <div className="flex-1 text-center md:text-left">
-              <h3 className="mb-2 text-3xl font-black text-[#3D2B1F]">
+              <h3 className="mb-2 text-3xl font-black text-white">
                 yuyukuma（ゆゆくま）
               </h3>
               <p className="mb-4 text-lg font-bold text-[#FF6B35]">
                 Googleアカウントを「AI自動エージェント」に変える人
               </p>
-              <p className="text-[#3D2B1F]/70 leading-relaxed">
+              <p className="text-white/70 leading-relaxed">
                 元々、小さな会社の経営者だった。楽楽精算、kintone、Slack、Trello、Salesforce…
-                便利なSaaSを次々と導入して、気づいたら<strong className="text-[#3D2B1F]">年間¥124万</strong>払ってた。
+                便利なSaaSを次々と導入して、気づいたら<strong className="text-white">年間¥124万</strong>払ってた。
                 そこでGoogleスプレッドシート + GASで月額課金ツールを全部無料化。
-                <strong className="text-[#3D2B1F]">年間¥124万→¥0</strong>に。
+                <strong className="text-white">年間¥124万→¥0</strong>に。
                 この経験を、あなたにも共有したい。
                 「難しいツールを、誰でも使えるシンプルなものに。」それが俺のミッションだ。
               </p>
@@ -40,18 +40,18 @@ export default function Profile() {
                 ].map((stat) => (
                   <div key={stat.label} className="text-center">
                     <div className="text-2xl font-black text-[#FF6B35]">{stat.value}</div>
-                    <div className="text-xs text-[#3D2B1F]/50">{stat.label}</div>
+                    <div className="text-xs text-white/50">{stat.label}</div>
                   </div>
                 ))}
               </div>
 
               {/* Social links */}
               <div className="mt-6 flex flex-wrap justify-center gap-2 md:justify-start">
-                <a href="https://x.com/yuyukuma0810" className="rounded-full bg-[#FF6B35]/10 px-3 py-1.5 text-xs font-medium text-[#FF6B35] hover:bg-[#FF6B35]/20 transition-colors">𝕏 Twitter</a>
+                <a href="https://x.com/yuyukuma0810" className="rounded-full bg-[#FF6B35]/10 px-3 py-1.5 text-xs font-medium text-[#FF6B35] hover:bg-[#FF6B35]/20 transition-colors">𝕏</a>
                 <a href="https://note.com/yuyukuma_gasoji" className="rounded-full bg-[#FF6B35]/10 px-3 py-1.5 text-xs font-medium text-[#FF6B35] hover:bg-[#FF6B35]/20 transition-colors">📝 note</a>
-                <a href="https://www.threads.net/@yuyukuma0810" className="rounded-full bg-[#FF6B35]/10 px-3 py-1.5 text-xs font-medium text-[#FF6B35] hover:bg-[#FF6B35]/20 transition-colors">🧵 Threads</a>
-                <a href="https://www.instagram.com/yuyukuma0810" className="rounded-full bg-[#FF6B35]/10 px-3 py-1.5 text-xs font-medium text-[#FF6B35] hover:bg-[#FF6B35]/20 transition-colors">📷 Instagram</a>
-                <a href="https://www.tiktok.com/@yuyukuma0810" className="rounded-full bg-[#FF6B35]/10 px-3 py-1.5 text-xs font-medium text-[#FF6B35] hover:bg-[#FF6B35]/20 transition-colors">🎵 TikTok</a>
+                <a href="https://www.threads.net/@yuyukuma0810" className="rounded-full bg-[#FF6B35]/10 px-3 py-1.5 text-xs font-medium text-[#FF6B35] hover:bg-[#FF6B35]/20 transition-colors">🧵</a>
+                <a href="https://www.instagram.com/yuyukuma0810" className="rounded-full bg-[#FF6B35]/10 px-3 py-1.5 text-xs font-medium text-[#FF6B35] hover:bg-[#FF6B35]/20 transition-colors">📷</a>
+                <a href="https://www.tiktok.com/@yuyukuma0810" className="rounded-full bg-[#FF6B35]/10 px-3 py-1.5 text-xs font-medium text-[#FF6B35] hover:bg-[#FF6B35]/20 transition-colors">🎵</a>
               </div>
             </div>
           </div>

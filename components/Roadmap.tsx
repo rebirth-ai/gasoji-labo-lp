@@ -47,30 +47,30 @@ const PRICE_STEPS = [
 
 export default function Roadmap() {
   return (
-    <section id="roadmap" className="px-6 py-12 md:py-28 bg-white">
+    <section id="roadmap" className="px-6 py-12 md:py-28 bg-[#1a1a2e]">
       <div className="mx-auto max-w-5xl">
         <div className="mb-16 text-center">
           <p className="mb-3 text-sm font-bold tracking-[0.1em] text-[#FF6B35] uppercase">ロードマップ</p>
-          <h2 className="mb-4 text-4xl font-black text-[#1a1a2e] md:text-5xl">
+          <h2 className="mb-4 text-4xl font-black text-white md:text-5xl">
             <span className="text-[#FF6B35]">500ツール</span>への道のり
           </h2>
-          <p className="text-lg text-[#3D2B1F]/60">段階的にツール追加 → 段階的に値上げ。早期加入ほどお得。</p>
+          <p className="text-lg text-white/60">段階的にツール追加 → 段階的に値上げ。早期加入ほどお得。</p>
         </div>
 
         {/* Price step bar */}
-        <div className="mb-16 rounded-2xl bg-[#FFF8F0] border border-[#FF6B35]/10 p-6 md:p-8">
-          <p className="mb-4 text-center text-sm font-bold text-[#3D2B1F]/50 tracking-wide">段階的値上げスケジュール</p>
+        <div className="mb-16 rounded-2xl bg-white/5 border border-white/10 p-6 md:p-8">
+          <p className="mb-4 text-center text-sm font-bold text-white/50 tracking-wide">段階的値上げスケジュール</p>
           <div className="flex items-center justify-between gap-1">
             {PRICE_STEPS.map((s, i) => (
               <div key={s.tools} className="flex-1 text-center">
                 <div className={`mx-auto mb-2 flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full text-xs md:text-sm font-black ${
                   s.active
                     ? 'bg-[#FF6B35] text-white shadow-lg shadow-[#FF6B35]/30 ring-4 ring-[#FF6B35]/20'
-                    : 'bg-[#3D2B1F]/5 text-[#3D2B1F]/40'
+                    : 'bg-white/10 text-white/40'
                 }`}>
                   {s.tools}
                 </div>
-                <div className={`text-xs md:text-sm font-bold ${s.active ? 'text-[#FF6B35]' : 'text-[#3D2B1F]/40'}`}>
+                <div className={`text-xs md:text-sm font-bold ${s.active ? 'text-[#FF6B35]' : 'text-white/40'}`}>
                   {s.price}
                 </div>
                 {s.active && (
@@ -83,10 +83,10 @@ export default function Roadmap() {
             ))}
           </div>
           {/* Progress bar */}
-          <div className="mt-4 h-2 rounded-full bg-[#3D2B1F]/5 overflow-hidden">
+          <div className="mt-4 h-2 rounded-full bg-white/10 overflow-hidden">
             <div className="h-full w-[8%] rounded-full bg-gradient-to-r from-[#FF6B35] to-[#F5A623] transition-all" />
           </div>
-          <div className="mt-2 flex justify-between text-[10px] text-[#3D2B1F]/30">
+          <div className="mt-2 flex justify-between text-[10px] text-white/30">
             <span>現在 10ツール</span>
             <span>目標 500ツール</span>
           </div>
@@ -95,16 +95,16 @@ export default function Roadmap() {
         {/* Timeline */}
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#FF6B35] via-[#F5A623] to-[#3D2B1F]/10 md:left-1/2" />
+          <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#FF6B35] via-[#F5A623] to-white/10 md:left-1/2" />
 
           {ROADMAP.map((item, i) => (
             <div key={item.phase} className={`relative mb-12 last:mb-0 ${i % 2 === 0 ? 'md:pr-[calc(50%+2rem)]' : 'md:pl-[calc(50%+2rem)]'}`}>
               {/* Dot */}
               <div className="absolute left-6 md:left-1/2 -translate-x-1/2 z-10">
-                <div className={`flex h-8 w-8 items-center justify-center rounded-full border-4 border-white text-sm ${
+                <div className={`flex h-8 w-8 items-center justify-center rounded-full border-4 border-[#1a1a2e] text-sm ${
                   item.status === 'active'
                     ? 'bg-[#FF6B35] shadow-lg shadow-[#FF6B35]/30'
-                    : 'bg-[#FAFAF8] border-[#3D2B1F]/10'
+                    : 'bg-white/10 border-white/10'
                 }`}>
                   {item.icon}
                 </div>
@@ -115,27 +115,27 @@ export default function Roadmap() {
                 <div className={`rounded-2xl p-6 transition-all duration-300 hover:shadow-lg ${
                   item.status === 'active'
                     ? 'bg-gradient-to-br from-[#FF6B35]/5 to-[#F5A623]/5 border-2 border-[#FF6B35]/20 shadow-md'
-                    : 'bg-[#FAFAF8] border border-[#3D2B1F]/5'
+                    : 'bg-white/5 border border-white/10'
                 }`}>
                   <div className="mb-3 flex items-center gap-2 flex-wrap">
                     <span className={`rounded-full px-3 py-1 text-xs font-bold ${
                       item.status === 'active'
                         ? 'bg-[#FF6B35] text-white'
-                        : 'bg-[#3D2B1F]/8 text-[#3D2B1F]/50'
+                        : 'bg-white/10 text-white/50'
                     }`}>
                       {item.phase}
                     </span>
-                    <span className="text-sm text-[#3D2B1F]/50">{item.period}</span>
+                    <span className="text-sm text-white/50">{item.period}</span>
                     {item.status === 'active' && (
                       <span className="rounded-full bg-green-100 px-2 py-0.5 text-[10px] font-bold text-green-700">進行中</span>
                     )}
                   </div>
                   <div className="mb-3 text-2xl font-black text-[#FF6B35]">
-                    {item.tools}<span className="text-base font-bold text-[#3D2B1F]/40 ml-1">{item.label}</span>
+                    {item.tools}<span className="text-base font-bold text-white/40 ml-1">{item.label}</span>
                   </div>
                   <ul className="space-y-1.5">
                     {item.items.map((it) => (
-                      <li key={it} className="flex items-center gap-2 text-sm text-[#3D2B1F]/70">
+                      <li key={it} className="flex items-center gap-2 text-sm text-white/70">
                         <span className="h-1.5 w-1.5 rounded-full bg-[#FF6B35]/40 shrink-0" />
                         {it}
                       </li>
@@ -149,10 +149,10 @@ export default function Roadmap() {
 
         {/* Bottom CTA */}
         <div className="mt-16 text-center">
-          <p className="mb-4 text-lg font-bold text-[#1a1a2e]">
+          <p className="mb-4 text-lg font-bold text-white">
             今なら<span className="text-[#FF6B35]">月額980円</span>で永久据え置き
           </p>
-          <p className="text-sm text-[#3D2B1F]/50">500ツール到達時の¥4,980が、今の加入者はずっと¥980。</p>
+          <p className="text-sm text-white/50">500ツール到達時の¥4,980が、今の加入者はずっと¥980。</p>
         </div>
       </div>
     </section>

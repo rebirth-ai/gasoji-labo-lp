@@ -1,9 +1,9 @@
 export default function FinalCTA() {
   return (
-    <section className="px-6 py-12 md:py-28 bg-white">
+    <section className="px-6 py-12 md:py-28 bg-[#1a1a2e]">
       <div className="mx-auto max-w-4xl">
-        <div className="rounded-[2rem] bg-gradient-to-br from-[#FFF8F0] to-white p-12 text-center shadow-2xl border border-[#FF6B35]/10 md:p-16">
-          <h2 className="mb-6 text-4xl font-black leading-tight md:text-5xl">
+        <div className="rounded-[2rem] bg-gradient-to-br from-[#FF6B35]/10 to-[#F5A623]/5 p-12 text-center shadow-2xl border border-[#FF6B35]/20 md:p-16">
+          <h2 className="mb-6 text-4xl font-black leading-tight text-white md:text-5xl">
             あなたも
             <br />
             <span className="bg-gradient-to-r from-[#FF6B35] to-[#F5A623] bg-clip-text text-transparent">
@@ -11,12 +11,12 @@ export default function FinalCTA() {
             </span>
           </h2>
 
-          <p className="mb-4 text-xl text-[#3D2B1F]/70">
+          <p className="mb-4 text-xl text-white/70">
             月額980円で、
-            <strong className="text-[#3D2B1F]"> 年間124万円 </strong>
+            <strong className="text-white"> 年間124万円 </strong>
             のコスト削減。
           </p>
-          <p className="mb-4 text-lg text-[#3D2B1F]/60">
+          <p className="mb-4 text-lg text-white/60">
             <span className="text-[#F5A623] font-bold">カフェのコーヒー2杯分</span>
             の投資で、圧倒的なリターン。
           </p>
@@ -34,8 +34,8 @@ export default function FinalCTA() {
             </svg>
           </a>
 
-          <p className="mt-6 text-sm text-[#3D2B1F]/40">
-            🎁 入会特典: 全ツール即時アクセス + ドキュメント + 無制限サポート + 永久据え置き価格
+          <p className="mt-6 text-sm text-white/40">
+            🎁 入会特典: 全ツール即時アクセス + 無制限サポート + 永久据え置き価格
           </p>
         </div>
       </div>
