@@ -28,11 +28,10 @@ export default function TokushohoPage() {
           <li>500種類以上のGASツール使い放題</li>
           <li>メンバーシップ限定コンテンツ</li>
           <li>カスタマイズサポート</li>
+          <li>※ 50ツール公開ごとにメンバーシップ価格+¥1,000アップ</li>
+          <li>※ 加入時の価格がそのまま据え置きとなります</li>
           <li>永久据え置き価格</li>
         </ul>
-
-        <h3>個別ツール（買い切り版）</h3>
-        <p><strong>GASExpense Pro:</strong> ¥2,980（税込）</p>
 
         <h2>3. 販売価格以外の費用</h2>
         <ul>
