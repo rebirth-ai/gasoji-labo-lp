@@ -24,7 +24,7 @@ export default function Profile() {
                 Googleアカウントを<br className="sm:hidden" />「AI自動エージェント」に変える人
               </p>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed text-left">
-                元々、小さな会社の経営者だった。楽楽精算、kintone、Slack、Trello、Salesforce… 便利なSaaSを次々と導入して、気づいたら<strong className="text-white whitespace-nowrap">年間¥124万</strong>払ってた。そこでGoogleスプレッドシート + GASで月額課金ツールを全部無料化。<strong className="text-white whitespace-nowrap">年間¥124万→¥0</strong>に。この経験を、あなたにも共有したい。「難しいツールを、誰でも使えるシンプルなものに。」それが俺のミッションだ。
+                元々、小さな会社の経営者だった。楽楽精算、kintone、Slack、Trello、Salesforce… 便利なSaaSを次々と導入して、気づいたら<strong className="text-gray-900 whitespace-nowrap">年間¥124万</strong>払ってた。そこでGoogleスプレッドシート + GASで月額課金ツールを全部無料化。<strong className="text-gray-900 whitespace-nowrap">年間¥124万→¥0</strong>に。この経験を、あなたにも共有したい。「難しいツールを、誰でも使えるシンプルなものに。」それが俺のミッションだ。
               </p>
 
               {/* Stats */}

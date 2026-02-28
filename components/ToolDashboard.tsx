@@ -83,7 +83,7 @@ export default function ToolDashboard() {
     <section id="tools" className="px-4 sm:px-6 py-12 md:py-28 bg-white">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-4xl font-black text-white md:text-5xl">
+          <h2 className="mb-4 text-4xl font-black text-gray-900 md:text-5xl">
             {TOTAL_TOOLS}個の無料ツールで
             <br />
             <span className="text-[#FF6B35]">何ができる？</span>
@@ -117,7 +117,7 @@ export default function ToolDashboard() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               aria-label="ツール名で検索"
-              className="w-full rounded-full border border-gray-200 bg-gray-50 py-3 pl-12 pr-4 text-sm text-white placeholder-white/30 outline-none focus:border-[#FF6B35] focus:ring-2 focus:ring-[#FF6B35]/20"
+              className="w-full rounded-full border border-gray-200 bg-gray-50 py-3 pl-12 pr-4 text-sm text-gray-900 placeholder-gray-400 outline-none focus:border-[#FF6B35] focus:ring-2 focus:ring-[#FF6B35]/20"
             />
           </div>
         </div>

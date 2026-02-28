@@ -47,7 +47,7 @@ export default function FAQ() {
     <section id="faq" className="px-6 py-12 md:py-28 bg-white">
       <div className="mx-auto max-w-3xl">
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-4xl font-black text-white md:text-5xl">
+          <h2 className="mb-4 text-4xl font-black text-gray-900 md:text-5xl">
             よくある<span className="text-[#FF6B35]">質問</span>
           </h2>
         </div>

@@ -51,7 +51,7 @@ export default function Roadmap() {
       <div className="mx-auto max-w-5xl">
         <div className="mb-16 text-center">
           <p className="mb-3 text-sm font-bold tracking-[0.1em] text-[#FF6B35] uppercase">ロードマップ</p>
-          <h2 className="mb-4 text-4xl font-black text-white md:text-5xl">
+          <h2 className="mb-4 text-4xl font-black text-gray-900 md:text-5xl">
             <span className="text-[#FF6B35]">500ツール</span>への道のり
           </h2>
           <p className="text-lg text-gray-500">段階的にツール追加 → 段階的に値上げ。早期加入ほどお得。</p>

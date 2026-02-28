@@ -3,7 +3,7 @@ export default function FinalCTA() {
     <section className="px-6 py-12 md:py-28 bg-gray-50">
       <div className="mx-auto max-w-4xl">
         <div className="rounded-[2rem] bg-gradient-to-br from-[#FF6B35]/10 to-[#F5A623]/5 p-12 text-center shadow-2xl border border-[#FF6B35]/20 md:p-16">
-          <h2 className="mb-6 text-4xl font-black leading-tight text-white md:text-5xl">
+          <h2 className="mb-6 text-4xl font-black leading-tight text-gray-900 md:text-5xl">
             あなたも
             <br />
             <span className="bg-gradient-to-r from-[#FF6B35] to-[#F5A623] bg-clip-text text-transparent">

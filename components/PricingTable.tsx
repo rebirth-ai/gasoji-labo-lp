@@ -12,7 +12,7 @@ export default function PricingTable() {
     <section id="pricing" className="px-6 py-12 md:py-28 bg-gray-50">
       <div className="mx-auto max-w-5xl">
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-4xl font-black text-white md:text-5xl">
+          <h2 className="mb-4 text-4xl font-black text-gray-900 md:text-5xl">
             <span className="text-[#FF6B35]">今が最安値。</span>
             <br />
             早期加入で永久据え置き。

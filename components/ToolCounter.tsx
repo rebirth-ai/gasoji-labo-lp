@@ -16,7 +16,7 @@ export default function ToolCounter() {
           {/* Header */}
           <div className="mb-6 flex items-center gap-3">
             <span className="text-3xl">🔥</span>
-            <h2 className="text-2xl font-black text-white md:text-3xl">ツール公開状況</h2>
+            <h2 className="text-2xl font-black text-gray-900 md:text-3xl">ツール公開状況</h2>
           </div>
 
           {/* Counter */}
