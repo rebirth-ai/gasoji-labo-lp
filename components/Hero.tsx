@@ -39,11 +39,13 @@ export default function Hero() {
               初期費用 & 追加コスト ¥0
             </p>
 
-            <h1 className="mb-6 text-[1.75rem] font-black leading-[1.15] tracking-tight text-white sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem]">
-              <span className="text-[#FF6B35]">GASツール500個</span>で<br className="hidden sm:inline" />
-              月額SaaSを{' '}
+            <h1 className="mb-6 text-[1.75rem] font-black leading-[1.2] tracking-tight text-white sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem]">
+              <span className="text-[#FF6B35]">GASツール500個</span>
+              <br />
+              で月額SaaSが
+              <br />
               <span className="relative inline-block">
-                完全置換
+                完全無料に！
                 <span className="absolute -bottom-1 left-0 h-1.5 w-full rounded-full bg-gradient-to-r from-[#FF6B35] to-[#F5A623]" />
               </span>
             </h1>
