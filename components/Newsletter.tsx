@@ -41,8 +41,12 @@ export default function Newsletter() {
   }
 
   return (
-    <section id="newsletter" className="px-6 py-12 md:py-28 bg-[#0f0f23]">
-      <div className="mx-auto max-w-3xl">
+    <section id="newsletter" className="relative px-6 py-12 md:py-28 bg-[#0f0f23] overflow-hidden">
+      {/* Newsletter illustration — 透過で背景に */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <img src="/newsletter-illustration.png" alt="" className="w-full max-w-4xl h-auto opacity-15" />
+      </div>
+      <div className="relative z-10 mx-auto max-w-3xl">
         <div className="rounded-3xl bg-gradient-to-br from-[#FF6B35] to-[#F5A623] p-10 text-center text-white shadow-2xl shadow-[#FF6B35]/20 md:p-14">
           <div className="mb-2 text-xs font-bold tracking-wider uppercase bg-white/20 rounded-full px-4 py-1.5 inline-block backdrop-blur-sm">📩 メルマガ登録者限定</div>
           <h2 className="mb-4 mt-4 text-3xl font-black md:text-4xl">
