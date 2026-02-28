@@ -4,6 +4,7 @@ const TESTIMONIALS = [
   {
     name: 'T.K.',
     role: '経理担当・中小企業',
+    avatar: '/avatars/testimonial-avatar-1-accountant.png',
     fallbackBg: 'bg-gradient-to-br from-[#FF6B35] to-[#F5A623]',
     fallbackInitial: 'T',
     quote: '経費精算が月3時間→10分に短縮。楽楽精算を解約して月3万円も浮いた。上司にも「なんでもっと早くやらなかったの」って言われました。',
@@ -14,6 +15,7 @@ const TESTIMONIALS = [
   {
     name: 'S.M.',
     role: 'フリーランス・Web制作',
+    avatar: '/avatars/testimonial-avatar-3-freelancer.png',
     fallbackBg: 'bg-gradient-to-br from-[#F5A623] to-[#FF6B35]',
     fallbackInitial: 'S',
     quote: 'SNS投稿が完全自動化。Buffer・Hootsuite不要で年間18万円節約できた。空いた時間でクライアントワークに集中。',
@@ -24,6 +26,7 @@ const TESTIMONIALS = [
   {
     name: 'Y.H.',
     role: '営業マネージャー・IT企業',
+    avatar: '/avatars/testimonial-avatar-2-manager.png',
     fallbackBg: 'bg-gradient-to-br from-[#3D2B1F] to-[#FF6B35]',
     fallbackInitial: 'Y',
     quote: '顧客管理をGASに移行。Salesforceの年60万円がゼロに。うちの規模なら機能は十分すぎる。',
@@ -34,6 +37,7 @@ const TESTIMONIALS = [
   {
     name: 'A.S.',
     role: 'スタートアップCEO',
+    avatar: '/avatars/testimonial-avatar-4-ceo.png',
     fallbackBg: 'bg-gradient-to-br from-[#FF6B35] to-[#3D2B1F]',
     fallbackInitial: 'A',
     quote: '議事録自動化で会議後の作業が激減。チーム全体の生産性が上がった。スタートアップにはGASが最強。',
@@ -88,9 +92,25 @@ export default function Testimonials() {
 
               {/* Author */}
               <div className="flex items-center gap-3 pt-4 border-t border-white/10">
-                {/* Initial avatar */}
-                <div className={`h-12 w-12 shrink-0 rounded-full ${t.fallbackBg} flex items-center justify-center text-white font-bold text-lg border-2 border-[#FF6B35]/15 shadow-sm`}>
-                  {t.fallbackInitial}
+                {/* Avatar with fallback */}
+                <div className="relative h-12 w-12 shrink-0">
+                  <img
+                    src={t.avatar}
+                    alt={t.name}
+                    className="h-12 w-12 rounded-full object-cover border-2 border-[#FF6B35]/15 shadow-sm"
+                    onError={(e) => {
+                      const el = e.currentTarget;
+                      el.style.display = 'none';
+                      const fb = el.nextElementSibling as HTMLElement;
+                      if (fb) fb.style.display = 'flex';
+                    }}
+                  />
+                  <div
+                    className={`h-12 w-12 rounded-full ${t.fallbackBg} items-center justify-center text-white font-bold text-lg border-2 border-[#FF6B35]/15 shadow-sm`}
+                    style={{ display: 'none' }}
+                  >
+                    {t.fallbackInitial}
+                  </div>
                 </div>
                 <div>
                   <div className="text-sm font-bold text-white">{t.name}</div>
