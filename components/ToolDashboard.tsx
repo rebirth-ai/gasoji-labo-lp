@@ -137,7 +137,7 @@ export default function ToolDashboard() {
           {(showAll ? filteredTools : filteredTools.slice(0, 8)).map((tool) => (
             <div
               key={tool.name}
-              className="group rounded-2xl bg-white/[0.15] p-6 border border-white/[0.25] transition-all hover:bg-white/20 hover:border-[#FF6B35]/30 hover:-translate-y-1"
+              className="group rounded-2xl bg-white/[0.22] p-6 border border-white/[0.3] transition-all hover:bg-white/20 hover:border-[#FF6B35]/30 hover:-translate-y-1"
             >
               <div className="mb-3 flex items-center justify-between">
                 <span className="text-3xl">{tool.emoji}</span>

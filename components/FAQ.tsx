@@ -54,7 +54,7 @@ export default function FAQ() {
 
         <div className="space-y-3">
           {FAQS.map((faq, i) => (
-            <div key={i} className="rounded-2xl bg-white/[0.15] border border-white/[0.25] overflow-hidden">
+            <div key={i} className="rounded-2xl bg-white/[0.22] border border-white/[0.3] overflow-hidden">
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="flex w-full items-center justify-between p-6 text-left"
