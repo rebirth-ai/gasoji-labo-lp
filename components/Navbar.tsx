@@ -22,7 +22,7 @@ export default function Navbar() {
     <nav className={`fixed top-0 z-50 w-full transition-all duration-300 ${scrolled ? 'bg-[#0a0a1a]/95 shadow-sm' : 'bg-[#0a0a1a]/80'} backdrop-blur-md`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 md:px-12 lg:px-16">
         <a href="/" className="flex items-center gap-2.5 text-lg font-black text-white">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#FF6B35] to-[#F5A623] text-sm text-white shadow-sm">🐻</span>
+          <img src="/yuyukuma-icon.png" alt="ゆゆくま" className="h-8 w-8 rounded-lg object-cover shadow-sm" />
           <span>GASおじラボ</span>
         </a>
 

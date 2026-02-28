@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
           <div className="flex items-center gap-2 text-lg font-black text-[#3D2B1F]">
-            <span className="text-2xl">🐻</span>
+            <img src="/yuyukuma-icon.png" alt="ゆゆくま" className="h-8 w-8 rounded-lg object-cover" />
             <span>GAS おじラボ</span>
           </div>
 

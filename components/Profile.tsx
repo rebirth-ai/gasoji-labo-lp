@@ -7,9 +7,7 @@ export default function Profile() {
             {/* Avatar */}
             <div className="relative flex-shrink-0">
               <div className="h-36 w-36 rounded-full bg-gradient-to-br from-[#FF6B35] to-[#F5A623] p-1 shadow-xl shadow-[#FF6B35]/20">
-                <div className="h-full w-full rounded-full bg-[#FFF8F0] flex items-center justify-center">
-                  <span className="text-7xl">🐻</span>
-                </div>
+                <img src="/yuyukuma-icon.png" alt="ゆゆくま" className="h-full w-full rounded-full object-cover" />
               </div>
               <div className="absolute -bottom-2 -right-2 rounded-full bg-[#FF6B35] px-3 py-1 text-xs font-black text-white shadow">
                 GASおじ
