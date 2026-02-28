@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: 'GASツール500個で年間124万円のSaaS費用を削減。今なら月額980円で全ツール使い放題。',
     url: 'https://lp.yuyukuma-blog.com',
     siteName: 'GASおじラボ',
-    images: [{ url: '/hero-visual.png', width: 1200, height: 800, alt: 'GASおじラボ' }],
+    images: [{ url: '/ogp.png', width: 1200, height: 630, alt: 'GASおじラボ｜月額課金から自由になろう' }],
     locale: 'ja_JP',
     type: 'website',
   },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'GASおじラボ｜月額課金から自由になろう',
     description: 'GASツール500個で年間124万円削減。月額980円で使い放題。',
-    images: ['/hero-visual.png'],
+    images: ['/ogp.png'],
     creator: '@yuyukuma0810',
   },
 }
