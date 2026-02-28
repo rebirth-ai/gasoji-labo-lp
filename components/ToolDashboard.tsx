@@ -88,13 +88,13 @@ export default function ToolDashboard() {
             <br />
             <span className="text-[#FF6B35]">何ができる？</span>
           </h2>
-          <p className="text-lg text-white/50">
+          <p className="text-lg text-white/70">
             全てGoogle Apps Script（GAS）で動く。サーバー代も月額課金もゼロ。
           </p>
           <div className="mt-4 flex justify-center gap-4 text-sm">
             <span className="rounded-full bg-green-500/10 text-green-400 px-3 py-1 font-bold">✅ {publishedCount}ツール公開中</span>
             <span className="rounded-full bg-[#FF6B35]/10 text-[#FF6B35] px-3 py-1 font-bold">🔜 {comingCount}ツール開発中</span>
-            <span className="rounded-full bg-white/10 text-white/50 px-3 py-1 font-bold">🎯 目標 {TOTAL_TOOLS}ツール</span>
+            <span className="rounded-full bg-white/10 text-white/70 px-3 py-1 font-bold">🎯 目標 {TOTAL_TOOLS}ツール</span>
           </div>
         </div>
 
@@ -108,7 +108,7 @@ export default function ToolDashboard() {
         {/* Search */}
         <div className="mb-8 flex justify-center">
           <div className="relative w-full max-w-md">
-            <svg className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
             <input
@@ -131,7 +131,7 @@ export default function ToolDashboard() {
               className={`rounded-full px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm font-medium transition-all ${
                 activeCategory === cat.id
                   ? 'bg-[#FF6B35] text-white shadow-lg shadow-[#FF6B35]/30'
-                  : 'bg-white/5 text-white/50 hover:bg-white/20 border border-white/10'
+                  : 'bg-white/5 text-white/70 hover:bg-white/20 border border-white/10'
               }`}
             >
               {cat.emoji} {cat.name}
@@ -159,7 +159,7 @@ export default function ToolDashboard() {
                 </span>
               </div>
               <h3 className="mb-1 text-lg font-black text-white">{tool.name}</h3>
-              <p className="text-sm text-white/50">{tool.desc}</p>
+              <p className="text-sm text-white/70">{tool.desc}</p>
             </div>
           ))}
         </div>
@@ -174,7 +174,7 @@ export default function ToolDashboard() {
             </button>
           </div>
         )}
-        <p className="mt-8 text-center text-sm text-white/30">
+        <p className="mt-8 text-center text-sm text-white/70">
           + 他{TOTAL_TOOLS - TOOLS.length}以上のツールがnoteメンバー限定で順次公開
         </p>
       </div>

@@ -38,14 +38,14 @@ export default function PricingTable() {
                   🔥 今の価格！
                 </div>
               )}
-              <div className={`mb-2 text-sm font-medium ${tier.current ? 'text-white/80' : 'text-white/50'}`}>
+              <div className={`mb-2 text-sm font-medium ${tier.current ? 'text-white/80' : 'text-white/70'}`}>
                 {tier.tools}ツール
               </div>
               <div className="mb-1 flex items-center justify-center gap-1">
                 <span className="text-lg">¥</span>
                 <span className="text-5xl font-black">{tier.price.toLocaleString()}</span>
               </div>
-              <div className={`mb-6 text-sm ${tier.current ? 'text-white/80' : 'text-white/50'}`}>
+              <div className={`mb-6 text-sm ${tier.current ? 'text-white/80' : 'text-white/70'}`}>
                 /月（税込）
               </div>
               {tier.current ? (
@@ -56,7 +56,7 @@ export default function PricingTable() {
                   今すぐ参加する →
                 </a>
               ) : (
-                <div className="text-sm text-white/30">
+                <div className="text-sm text-white/70">
                   将来の価格
                 </div>
               )}
@@ -68,8 +68,8 @@ export default function PricingTable() {
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           {PRICING_TIERS.slice(3).map((tier) => (
             <div key={tier.tools} className="rounded-xl bg-white/5 border border-white/10 px-4 py-2 text-center">
-              <span className="text-xs text-white/40">{tier.tools}ツール:</span>
-              <span className="ml-1 text-sm font-bold text-white/50">¥{tier.price.toLocaleString()}/月</span>
+              <span className="text-xs text-white/60">{tier.tools}ツール:</span>
+              <span className="ml-1 text-sm font-bold text-white/70">¥{tier.price.toLocaleString()}/月</span>
             </div>
           ))}
         </div>

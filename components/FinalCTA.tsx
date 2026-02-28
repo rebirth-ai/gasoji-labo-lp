@@ -34,7 +34,7 @@ export default function FinalCTA() {
             </svg>
           </a>
 
-          <p className="mt-6 text-sm text-white/40">
+          <p className="mt-6 text-sm text-white/60">
             🎁 入会特典: 全ツール即時アクセス + 無制限サポート + 永久据え置き価格
           </p>
         </div>

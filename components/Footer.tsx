@@ -9,23 +9,23 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
-            <a href="https://x.com/yuyukuma0810" className="text-sm text-white/50 hover:text-[#FF6B35] transition-colors">𝕏 Twitter</a>
-            <a href="https://note.com/yuyukuma_gasoji" className="text-sm text-white/50 hover:text-[#FF6B35] transition-colors">📝 note</a>
-            <a href="https://note.com/yuyukuma_gasoji/membership" className="text-sm text-white/50 hover:text-[#FF6B35] transition-colors">🎯 メンバーシップ</a>
-            <a href="https://www.threads.net/@yuyukuma0810" className="text-sm text-white/50 hover:text-[#FF6B35] transition-colors">🧵 Threads</a>
-            <a href="https://www.instagram.com/yuyukuma0810" className="text-sm text-white/50 hover:text-[#FF6B35] transition-colors">📷 Instagram</a>
-            <a href="https://www.tiktok.com/@yuyukuma0810" className="text-sm text-white/50 hover:text-[#FF6B35] transition-colors">🎵 TikTok</a>
+            <a href="https://x.com/yuyukuma0810" className="text-sm text-white/70 hover:text-[#FF6B35] transition-colors">𝕏 Twitter</a>
+            <a href="https://note.com/yuyukuma_gasoji" className="text-sm text-white/70 hover:text-[#FF6B35] transition-colors">📝 note</a>
+            <a href="https://note.com/yuyukuma_gasoji/membership" className="text-sm text-white/70 hover:text-[#FF6B35] transition-colors">🎯 メンバーシップ</a>
+            <a href="https://www.threads.net/@yuyukuma0810" className="text-sm text-white/70 hover:text-[#FF6B35] transition-colors">🧵 Threads</a>
+            <a href="https://www.instagram.com/yuyukuma0810" className="text-sm text-white/70 hover:text-[#FF6B35] transition-colors">📷 Instagram</a>
+            <a href="https://www.tiktok.com/@yuyukuma0810" className="text-sm text-white/70 hover:text-[#FF6B35] transition-colors">🎵 TikTok</a>
           </div>
         </div>
 
-        <div className="mt-6 flex flex-wrap justify-center gap-4 text-xs text-white/30">
-          <a href="/privacy" className="hover:text-white/50 transition-colors">プライバシーポリシー</a>
+        <div className="mt-6 flex flex-wrap justify-center gap-4 text-xs text-white/70">
+          <a href="/privacy" className="hover:text-white/70 transition-colors">プライバシーポリシー</a>
           <span>|</span>
-          <a href="/tokushoho" className="hover:text-white/50 transition-colors">特定商取引法に基づく表記</a>
+          <a href="/tokushoho" className="hover:text-white/70 transition-colors">特定商取引法に基づく表記</a>
           <span>|</span>
-          <a href="mailto:contact@yuyukuma-blog.com" className="hover:text-white/50 transition-colors">お問い合わせ</a>
+          <a href="mailto:contact@yuyukuma-blog.com" className="hover:text-white/70 transition-colors">お問い合わせ</a>
         </div>
-        <div className="mt-4 text-center text-sm text-white/30">
+        <div className="mt-4 text-center text-sm text-white/70">
           © 2026 ゆゆくま（GASおじ） | Googleアカウントを「AI自動エージェント」に変える人
         </div>
       </div>

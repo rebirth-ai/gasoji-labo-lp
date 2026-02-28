@@ -32,7 +32,7 @@ export default function BeforeAfter() {
               ))}
             </ul>
             <div className="mt-8 border-t border-white/10 pt-6 text-center">
-              <div className="text-sm text-white/50">年間合計</div>
+              <div className="text-sm text-white/70">年間合計</div>
               <div className="text-4xl font-black text-red-400">¥124万円</div>
             </div>
           </div>
@@ -58,7 +58,7 @@ export default function BeforeAfter() {
               ))}
             </ul>
             <div className="mt-8 border-t border-[#FF6B35]/20 pt-6 text-center">
-              <div className="text-sm text-white/50">年間合計</div>
+              <div className="text-sm text-white/70">年間合計</div>
               <div className="text-4xl font-black text-[#FF6B35]">¥0</div>
               <div className="mt-2 text-sm font-bold text-[#FF6B35]">
                 月額980円だけで、この全てが手に入る。

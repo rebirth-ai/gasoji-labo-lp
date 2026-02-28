@@ -19,7 +19,7 @@ export default function Profile() {
               <h3 className="mb-2 text-2xl sm:text-3xl font-black text-white">
                 ゆゆくま
               </h3>
-              <p className="mb-1 text-sm font-bold text-white/50">（通称：GASおじ）</p>
+              <p className="mb-1 text-sm font-bold text-white/70">（通称：GASおじ）</p>
               <p className="mb-4 text-base sm:text-lg font-bold text-[#FF6B35]">
                 Googleアカウントを<br className="sm:hidden" />「AI自動エージェント」に変える人
               </p>
@@ -36,7 +36,7 @@ export default function Profile() {
                 ].map((stat) => (
                   <div key={stat.label} className="text-center">
                     <div className="text-xl sm:text-2xl font-black text-[#FF6B35] whitespace-nowrap">{stat.value}</div>
-                    <div className="text-[10px] sm:text-xs text-white/50 whitespace-nowrap">{stat.label}</div>
+                    <div className="text-[10px] sm:text-xs text-white/70 whitespace-nowrap">{stat.label}</div>
                   </div>
                 ))}
               </div>

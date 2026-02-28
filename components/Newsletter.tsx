@@ -112,7 +112,7 @@ export default function Newsletter() {
             <p className="mt-3 text-sm text-white/90 bg-red-500/20 rounded-lg py-2 px-4 inline-block">{errorMsg}</p>
           )}
 
-          <p className="mt-4 text-xs text-white/50">
+          <p className="mt-4 text-xs text-white/70">
             ※ いつでも配信停止可能です。スパムは送りません。
           </p>
           <p className="mt-3 text-xs text-white/70 bg-white/10 rounded-full px-4 py-1.5 inline-block backdrop-blur-sm">

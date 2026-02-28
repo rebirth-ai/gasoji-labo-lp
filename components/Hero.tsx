@@ -50,7 +50,7 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className="mb-8 max-w-md text-base leading-relaxed text-white/50 lg:text-lg">
+            <p className="mb-8 max-w-md text-base leading-relaxed text-white/70 lg:text-lg">
               月額課金のSaaSをGoogle Apps Scriptで置き換え。
               <span className="font-semibold text-white/80">年間124万円の削減</span>を実現。
             </p>
@@ -106,8 +106,8 @@ export default function Hero() {
 
               {/* Stats card overlay — bottom-left */}
               <div className="absolute -bottom-4 -left-2 md:left-4 rounded-2xl bg-white/10 backdrop-blur-md px-5 py-4 border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
-                <div className="text-[10px] font-bold text-white/50 mb-0.5">公開中</div>
-                <div className="text-3xl font-black text-white leading-none">10<span className="text-sm font-bold text-white/40 ml-1">/ 500</span></div>
+                <div className="text-[10px] font-bold text-white/70 mb-0.5">公開中</div>
+                <div className="text-3xl font-black text-white leading-none">10<span className="text-sm font-bold text-white/60 ml-1">/ 500</span></div>
                 <div className="mt-1 text-[10px] font-bold text-[#FF6B35]">毎週追加中 →</div>
               </div>
 

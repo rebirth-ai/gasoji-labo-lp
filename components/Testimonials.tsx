@@ -56,7 +56,7 @@ export default function Testimonials() {
           <h2 className="mb-4 text-4xl font-black text-white md:text-5xl">
             導入者の<span className="text-[#FF6B35]">リアルな声</span>
           </h2>
-          <p className="text-base text-white/50">実際にGASツールを使っている方々の体験談</p>
+          <p className="text-base text-white/70">実際にGASツールを使っている方々の体験談</p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
@@ -73,7 +73,7 @@ export default function Testimonials() {
                   </svg>
                   <span className="text-xs font-bold text-[#FF6B35]">{t.metric}</span>
                 </div>
-                <span className="text-[10px] text-white/30">{t.metricDetail}</span>
+                <span className="text-[10px] text-white/70">{t.metricDetail}</span>
               </div>
 
               {/* Stars */}
@@ -114,7 +114,7 @@ export default function Testimonials() {
                 </div>
                 <div>
                   <div className="text-sm font-bold text-white">{t.name}</div>
-                  <div className="text-xs text-white/40">{t.role}</div>
+                  <div className="text-xs text-white/60">{t.role}</div>
                 </div>
               </div>
             </div>
