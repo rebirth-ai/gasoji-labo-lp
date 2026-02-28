@@ -44,15 +44,31 @@ export default function Newsletter() {
     <section className="px-6 py-12 md:py-28">
       <div className="mx-auto max-w-3xl">
         <div className="rounded-3xl bg-gradient-to-br from-[#FF6B35] to-[#F5A623] p-10 text-center text-white shadow-2xl shadow-[#FF6B35]/20 md:p-14">
-          <div className="mb-4 text-4xl">🎁</div>
-          <h2 className="mb-4 text-3xl font-black md:text-4xl">
+          <div className="mb-2 text-xs font-bold tracking-wider uppercase bg-white/20 rounded-full px-4 py-1.5 inline-block backdrop-blur-sm">📩 メルマガ登録者限定</div>
+          <h2 className="mb-4 mt-4 text-3xl font-black md:text-4xl">
             無料GASツールをプレゼント！
           </h2>
-          <p className="mb-8 text-lg text-white/80">
-            メルマガ登録で、すぐに使えるGASツールを1つ無料でお届けします。
-            <br />
-            さらに毎週、GAS活用テクニックを配信中！
-          </p>
+          <div className="mb-6 mx-auto max-w-md text-left space-y-2">
+            <div className="flex items-center gap-2 text-white/90">
+              <span className="text-lg">🎁</span>
+              <span className="font-bold">X自動投稿ツール</span>
+              <span className="text-xs bg-white/20 rounded-full px-2 py-0.5">登録直後にお届け</span>
+            </div>
+            <div className="flex items-center gap-2 text-white/90">
+              <span className="text-lg">🎁</span>
+              <span className="font-bold">GAS経費精算ツール</span>
+              <span className="text-xs bg-white/20 rounded-full px-2 py-0.5">翌日お届け</span>
+            </div>
+            <div className="flex items-center gap-2 text-white/90">
+              <span className="text-lg">🎁</span>
+              <span className="font-bold">メルマガ限定の特別ツール</span>
+              <span className="text-xs bg-red-500/40 rounded-full px-2 py-0.5">noteにはない特典！</span>
+            </div>
+            <div className="flex items-center gap-2 text-white/70">
+              <span className="text-lg">📧</span>
+              <span>毎日19時にGAS活用情報をお届け</span>
+            </div>
+          </div>
 
           {status === 'success' ? (
             <div className="rounded-2xl bg-white/20 p-6 backdrop-blur-sm">
