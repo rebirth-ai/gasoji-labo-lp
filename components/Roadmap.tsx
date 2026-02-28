@@ -92,6 +92,15 @@ export default function Roadmap() {
           </div>
         </div>
 
+        {/* RPG Illustration */}
+        <div className="mb-16 overflow-hidden rounded-2xl border border-white/[0.25]">
+          <img
+            src="/roadmap-illustration.png"
+            alt="500ツールへの冒険マップ — ゆゆくまが10→50→100→200→500ツールへ進む"
+            className="w-full h-auto"
+          />
+        </div>
+
         {/* Timeline */}
         <div className="relative">
           {/* Timeline line */}
