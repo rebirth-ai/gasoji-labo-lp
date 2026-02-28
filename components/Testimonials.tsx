@@ -63,7 +63,7 @@ export default function Testimonials() {
           {TESTIMONIALS.map((t) => (
             <div
               key={t.name}
-              className="group relative rounded-2xl bg-white/[0.08] p-8 border border-white/[0.15] transition-all duration-300 hover:bg-white/8 hover:-translate-y-1"
+              className="group relative rounded-2xl bg-white/[0.15] p-8 border border-white/[0.25] transition-all duration-300 hover:bg-white/8 hover:-translate-y-1"
             >
               {/* Metric badge */}
               <div className="mb-5 flex items-center gap-3">

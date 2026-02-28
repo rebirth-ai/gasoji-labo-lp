@@ -58,7 +58,7 @@ export default function Roadmap() {
         </div>
 
         {/* Price step bar */}
-        <div className="mb-16 rounded-2xl bg-white/[0.08] border border-white/[0.15] p-6 md:p-8">
+        <div className="mb-16 rounded-2xl bg-white/[0.15] border border-white/[0.25] p-6 md:p-8">
           <p className="mb-4 text-center text-sm font-bold text-white/50 tracking-wide">段階的値上げスケジュール</p>
           <div className="flex items-center justify-between gap-1">
             {PRICE_STEPS.map((s, i) => (
@@ -115,7 +115,7 @@ export default function Roadmap() {
                 <div className={`rounded-2xl p-6 transition-all duration-300 hover:shadow-lg ${
                   item.status === 'active'
                     ? 'bg-gradient-to-br from-[#FF6B35]/5 to-[#F5A623]/5 border-2 border-[#FF6B35]/20 shadow-md'
-                    : 'bg-white/[0.08] border border-white/[0.15]'
+                    : 'bg-white/[0.15] border border-white/[0.25]'
                 }`}>
                   <div className="mb-3 flex items-center gap-2 flex-wrap">
                     <span className={`rounded-full px-3 py-1 text-xs font-bold ${

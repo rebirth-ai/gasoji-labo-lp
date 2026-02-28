@@ -124,7 +124,7 @@ export default function ToolDashboard() {
               className={`rounded-full px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm font-medium transition-all ${
                 activeCategory === cat.id
                   ? 'bg-[#FF6B35] text-white shadow-lg shadow-[#FF6B35]/30'
-                  : 'bg-white/5 text-white/50 hover:bg-white/10 border border-white/10'
+                  : 'bg-white/5 text-white/50 hover:bg-white/20 border border-white/10'
               }`}
             >
               {cat.emoji} {cat.name}
@@ -137,7 +137,7 @@ export default function ToolDashboard() {
           {(showAll ? filteredTools : filteredTools.slice(0, 8)).map((tool) => (
             <div
               key={tool.name}
-              className="group rounded-2xl bg-white/[0.08] p-6 border border-white/[0.15] transition-all hover:bg-white/10 hover:border-[#FF6B35]/30 hover:-translate-y-1"
+              className="group rounded-2xl bg-white/[0.15] p-6 border border-white/[0.25] transition-all hover:bg-white/20 hover:border-[#FF6B35]/30 hover:-translate-y-1"
             >
               <div className="mb-3 flex items-center justify-between">
                 <span className="text-3xl">{tool.emoji}</span>
