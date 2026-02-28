@@ -2,44 +2,40 @@
 
 const TESTIMONIALS = [
   {
-    name: '田中 健太',
+    name: 'T.K.',
     role: '経理担当・中小企業',
-    avatar: '/avatars/avatar-keiri.png',  // 経理担当
     fallbackBg: 'bg-gradient-to-br from-[#FF6B35] to-[#F5A623]',
-    fallbackInitial: '田',
+    fallbackInitial: 'T',
     quote: '経費精算が月3時間→10分に短縮。楽楽精算を解約して月3万円も浮いた。上司にも「なんでもっと早くやらなかったの」って言われました。',
     metric: '月3時間→10分',
     metricDetail: '経費精算の処理時間',
     stars: 5,
   },
   {
-    name: '佐藤 美咲',
+    name: 'S.M.',
     role: 'フリーランス・Web制作',
-    avatar: '/avatars/avatar-freelance.png',
     fallbackBg: 'bg-gradient-to-br from-[#F5A623] to-[#FF6B35]',
-    fallbackInitial: '佐',
+    fallbackInitial: 'S',
     quote: 'SNS投稿が完全自動化。Buffer・Hootsuite不要で年間18万円節約できた。空いた時間でクライアントワークに集中。',
     metric: '年間18万円節約',
     metricDetail: 'SNS管理ツール費',
     stars: 5,
   },
   {
-    name: '山田 裕也',
+    name: 'Y.H.',
     role: '営業マネージャー・IT企業',
-    avatar: '/avatars/avatar-sales.png',
     fallbackBg: 'bg-gradient-to-br from-[#3D2B1F] to-[#FF6B35]',
-    fallbackInitial: '山',
+    fallbackInitial: 'Y',
     quote: '顧客管理をGASに移行。Salesforceの年60万円がゼロに。うちの規模なら機能は十分すぎる。',
     metric: '年間60万円→¥0',
     metricDetail: 'CRM費用',
     stars: 5,
   },
   {
-    name: '鈴木 あゆみ',
+    name: 'A.S.',
     role: 'スタートアップCEO',
-    avatar: '/avatars/avatar-ceo.png',
     fallbackBg: 'bg-gradient-to-br from-[#FF6B35] to-[#3D2B1F]',
-    fallbackInitial: '鈴',
+    fallbackInitial: 'A',
     quote: '議事録自動化で会議後の作業が激減。チーム全体の生産性が上がった。スタートアップにはGASが最強。',
     metric: '作業時間80%削減',
     metricDetail: '会議後の事務作業',
@@ -92,26 +88,9 @@ export default function Testimonials() {
 
               {/* Author */}
               <div className="flex items-center gap-3 pt-4 border-t border-white/10">
-                {/* Individual avatar with fallback */}
-                <div className="relative h-12 w-12 shrink-0">
-                  <img
-                    src={t.avatar}
-                    alt={t.name}
-                    className="h-12 w-12 rounded-full object-cover border-2 border-[#FF6B35]/15 shadow-sm"
-                    onError={(e) => {
-                      // Fallback to initials
-                      const el = e.currentTarget;
-                      el.style.display = 'none';
-                      const fallback = el.nextElementSibling as HTMLElement;
-                      if (fallback) fallback.style.display = 'flex';
-                    }}
-                  />
-                  <div
-                    className={`h-12 w-12 rounded-full ${t.fallbackBg} items-center justify-center text-white font-bold text-lg border-2 border-[#FF6B35]/15 shadow-sm hidden`}
-                    style={{ display: 'none' }}
-                  >
-                    {t.fallbackInitial}
-                  </div>
+                {/* Initial avatar */}
+                <div className={`h-12 w-12 shrink-0 rounded-full ${t.fallbackBg} flex items-center justify-center text-white font-bold text-lg border-2 border-[#FF6B35]/15 shadow-sm`}>
+                  {t.fallbackInitial}
                 </div>
                 <div>
                   <div className="text-sm font-bold text-white">{t.name}</div>

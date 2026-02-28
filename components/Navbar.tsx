@@ -6,6 +6,7 @@ const NAV_LINKS = [
   { href: '#pricing', label: '料金プラン' },
   { href: '#roadmap', label: 'ロードマップ' },
   { href: '#faq', label: 'FAQ' },
+  { href: '#newsletter', label: '📩 無料登録' },
 ]
 
 export default function Navbar() {

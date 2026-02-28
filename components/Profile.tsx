@@ -17,7 +17,7 @@ export default function Profile() {
             {/* Info */}
             <div className="flex-1 text-center md:text-left">
               <h3 className="mb-2 text-3xl font-black text-white">
-                yuyukuma（ゆゆくま）
+                ゆゆくま<span className="text-lg font-bold text-white/50 ml-2">（通称：GASおじ）</span>
               </h3>
               <p className="mb-4 text-lg font-bold text-[#FF6B35]">
                 Googleアカウントを「AI自動エージェント」に変える人
