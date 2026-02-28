@@ -46,13 +46,12 @@ export default function Profile() {
               </div>
 
               {/* Social links */}
-              <div className="mt-6 flex justify-center gap-3 md:justify-start">
-                <a href="https://x.com/yuyukuma0810" className="rounded-full bg-[#FF6B35]/10 px-4 py-2 text-sm font-medium text-[#FF6B35] hover:bg-[#FF6B35]/20 transition-colors">
-                  𝕏 @yuyukuma0810
-                </a>
-                <a href="https://note.com/yuyukuma_gasoji" className="rounded-full bg-[#FF6B35]/10 px-4 py-2 text-sm font-medium text-[#FF6B35] hover:bg-[#FF6B35]/20 transition-colors">
-                  📝 note
-                </a>
+              <div className="mt-6 flex flex-wrap justify-center gap-2 md:justify-start">
+                <a href="https://x.com/yuyukuma0810" className="rounded-full bg-[#FF6B35]/10 px-3 py-1.5 text-xs font-medium text-[#FF6B35] hover:bg-[#FF6B35]/20 transition-colors">𝕏 Twitter</a>
+                <a href="https://note.com/yuyukuma_gasoji" className="rounded-full bg-[#FF6B35]/10 px-3 py-1.5 text-xs font-medium text-[#FF6B35] hover:bg-[#FF6B35]/20 transition-colors">📝 note</a>
+                <a href="https://www.threads.net/@yuyukuma0810" className="rounded-full bg-[#FF6B35]/10 px-3 py-1.5 text-xs font-medium text-[#FF6B35] hover:bg-[#FF6B35]/20 transition-colors">🧵 Threads</a>
+                <a href="https://www.instagram.com/yuyukuma0810" className="rounded-full bg-[#FF6B35]/10 px-3 py-1.5 text-xs font-medium text-[#FF6B35] hover:bg-[#FF6B35]/20 transition-colors">📷 Instagram</a>
+                <a href="https://www.tiktok.com/@yuyukuma0810" className="rounded-full bg-[#FF6B35]/10 px-3 py-1.5 text-xs font-medium text-[#FF6B35] hover:bg-[#FF6B35]/20 transition-colors">🎵 TikTok</a>
               </div>
             </div>
           </div>

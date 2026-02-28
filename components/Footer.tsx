@@ -8,16 +8,13 @@ export default function Footer() {
             <span>GAS おじラボ</span>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6">
-            <a href="https://x.com/yuyukuma0810" className="text-sm text-[#3D2B1F]/50 hover:text-[#FF6B35] transition-colors">
-              X (Twitter)
-            </a>
-            <a href="https://note.com/yuyukuma_gasoji" className="text-sm text-[#3D2B1F]/50 hover:text-[#FF6B35] transition-colors">
-              note
-            </a>
-            <a href="https://note.com/yuyukuma_gasoji/membership" className="text-sm text-[#3D2B1F]/50 hover:text-[#FF6B35] transition-colors">
-              メンバーシップ
-            </a>
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+            <a href="https://x.com/yuyukuma0810" className="text-sm text-[#3D2B1F]/50 hover:text-[#FF6B35] transition-colors">𝕏 Twitter</a>
+            <a href="https://note.com/yuyukuma_gasoji" className="text-sm text-[#3D2B1F]/50 hover:text-[#FF6B35] transition-colors">📝 note</a>
+            <a href="https://note.com/yuyukuma_gasoji/membership" className="text-sm text-[#3D2B1F]/50 hover:text-[#FF6B35] transition-colors">🎯 メンバーシップ</a>
+            <a href="https://www.threads.net/@yuyukuma0810" className="text-sm text-[#3D2B1F]/50 hover:text-[#FF6B35] transition-colors">🧵 Threads</a>
+            <a href="https://www.instagram.com/yuyukuma0810" className="text-sm text-[#3D2B1F]/50 hover:text-[#FF6B35] transition-colors">📷 Instagram</a>
+            <a href="https://www.tiktok.com/@yuyukuma0810" className="text-sm text-[#3D2B1F]/50 hover:text-[#FF6B35] transition-colors">🎵 TikTok</a>
           </div>
         </div>
 
