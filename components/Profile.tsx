@@ -2,7 +2,7 @@ export default function Profile() {
   return (
     <section className="px-6 py-12 md:py-28 bg-[#0f0f23]">
       <div className="mx-auto max-w-4xl">
-        <div className="rounded-3xl bg-white/5 p-8 border border-white/10 md:p-12">
+        <div className="rounded-3xl bg-white/[0.08] p-8 border border-white/[0.15] md:p-12">
           <div className="flex flex-col md:flex-row items-center gap-8">
             {/* Avatar */}
             <div className="relative flex-shrink-0">

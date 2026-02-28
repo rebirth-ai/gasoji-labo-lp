@@ -8,7 +8,7 @@ export default function BeforeAfter() {
 
         <div className="grid gap-8 md:grid-cols-2">
           {/* Before */}
-          <div className="rounded-3xl bg-white/5 p-8 shadow-lg border border-red-500/20 md:p-10">
+          <div className="rounded-3xl bg-white/[0.08] p-8 shadow-lg border border-red-500/30 md:p-10">
             <div className="mb-6 inline-flex rounded-full bg-red-500/10 px-4 py-2 text-sm font-bold text-red-400">
               ❌ SaaS月額課金地獄
             </div>

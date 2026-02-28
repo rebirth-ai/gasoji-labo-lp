@@ -41,14 +41,14 @@ export default function Newsletter() {
   }
 
   return (
-    <section id="newsletter" className="px-6 py-12 md:py-28">
+    <section id="newsletter" className="px-6 py-12 md:py-28 bg-[#0f0f23]">
       <div className="mx-auto max-w-3xl">
         <div className="rounded-3xl bg-gradient-to-br from-[#FF6B35] to-[#F5A623] p-10 text-center text-white shadow-2xl shadow-[#FF6B35]/20 md:p-14">
           <div className="mb-2 text-xs font-bold tracking-wider uppercase bg-white/20 rounded-full px-4 py-1.5 inline-block backdrop-blur-sm">📩 メルマガ登録者限定</div>
           <h2 className="mb-4 mt-4 text-3xl font-black md:text-4xl">
             無料GASツールをプレゼント！
           </h2>
-          <div className="mb-6 mx-auto max-w-sm text-left space-y-3">
+          <div className="mb-6 mx-auto max-w-sm text-center sm:text-left space-y-3">
             <div className="flex gap-3 items-start text-white/90">
               <span className="text-xl flex-shrink-0 mt-0.5">🎁</span>
               <div>

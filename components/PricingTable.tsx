@@ -30,7 +30,7 @@ export default function PricingTable() {
               className={`relative rounded-2xl p-8 text-center transition-all ${
                 tier.current
                   ? 'bg-gradient-to-br from-[#FF6B35] to-[#F5A623] text-white shadow-2xl shadow-[#FF6B35]/30 scale-105 ring-4 ring-[#FF6B35]/20'
-                  : 'bg-white/5 border border-white/10 text-white'
+                  : 'bg-white/[0.08] border border-white/[0.15] text-white'
               }`}
             >
               {tier.current && (

@@ -70,7 +70,7 @@ export default function ToolDashboard() {
   const filteredTools = useMemo(() => {
     return TOOLS.filter((tool) => {
       const matchCat = activeCategory === 'all' || tool.cat === activeCategory
-      const matchSearch = !search || tool.name.includes(search) || tool.desc.includes(search)
+      const matchSearch = !search || tool.name.toLowerCase().includes(search.toLowerCase()) || tool.desc.toLowerCase().includes(search.toLowerCase())
       return matchCat && matchSearch
     })
   }, [activeCategory, search])
@@ -91,7 +91,7 @@ export default function ToolDashboard() {
             全てGoogle Apps Script（GAS）で動く。サーバー代も月額課金もゼロ。
           </p>
           <div className="mt-4 flex justify-center gap-4 text-sm">
-            <span className="rounded-full bg-green-50 text-green-600 px-3 py-1 font-bold">✅ {publishedCount}ツール公開中</span>
+            <span className="rounded-full bg-green-500/10 text-green-400 px-3 py-1 font-bold">✅ {publishedCount}ツール公開中</span>
             <span className="rounded-full bg-[#FF6B35]/10 text-[#FF6B35] px-3 py-1 font-bold">🔜 {comingCount}ツール開発中</span>
             <span className="rounded-full bg-white/10 text-white/50 px-3 py-1 font-bold">🎯 目標 {TOTAL_TOOLS}ツール</span>
           </div>
@@ -132,18 +132,18 @@ export default function ToolDashboard() {
         </div>
 
         {/* Tool grid */}
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {filteredTools.map((tool) => (
             <div
               key={tool.name}
-              className="group rounded-2xl bg-white/5 p-6 border border-white/8 transition-all hover:bg-white/10 hover:border-[#FF6B35]/30 hover:-translate-y-1"
+              className="group rounded-2xl bg-white/[0.08] p-6 border border-white/[0.15] transition-all hover:bg-white/10 hover:border-[#FF6B35]/30 hover:-translate-y-1"
             >
               <div className="mb-3 flex items-center justify-between">
                 <span className="text-3xl">{tool.emoji}</span>
                 <span
                   className={`rounded-full px-2.5 py-0.5 text-xs font-bold ${
                     tool.status === 'published'
-                      ? 'bg-green-50 text-green-600'
+                      ? 'bg-green-500/10 text-green-400'
                       : 'bg-[#FF6B35]/10 text-[#FF6B35]'
                   }`}
                 >

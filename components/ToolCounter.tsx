@@ -12,7 +12,7 @@ export default function ToolCounter() {
   return (
     <section className="px-6 py-16 md:py-20 bg-[#0f0f23]">
       <div className="mx-auto max-w-4xl">
-        <div className="rounded-3xl bg-white/5 p-8 md:p-12 shadow-xl border border-white/10 backdrop-blur-sm">
+        <div className="rounded-3xl bg-white/[0.08] p-8 md:p-12 shadow-xl border border-white/[0.15] backdrop-blur-sm">
           {/* Header */}
           <div className="mb-6 flex items-center gap-3">
             <span className="text-3xl">🔥</span>
@@ -36,7 +36,7 @@ export default function ToolCounter() {
 
           {/* Info cards */}
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            <div className="rounded-2xl bg-white/5 border border-white/10 p-5 text-center">
+            <div className="rounded-2xl bg-white/[0.08] border border-white/[0.15] p-5 text-center">
               <div className="text-sm font-medium text-white/50">現在の価格</div>
               <div className="text-3xl font-black text-[#FF6B35]">¥{CURRENT_PRICE.toLocaleString()}</div>
               <div className="text-sm text-white/50">/月</div>
