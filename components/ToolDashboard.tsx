@@ -17,17 +17,17 @@ const CATEGORIES = [
 ]
 
 const TOOLS = [
-  // Published (10)
-  { name: 'X自動投稿', cat: 'sns', emoji: '📱', desc: 'Buffer代替。毎日自動投稿', status: 'published' },
-  { name: 'AI文章生成', cat: 'ai', emoji: '🤖', desc: 'ChatGPT APIで自動文章作成', status: 'published' },
-  { name: 'データ可視化', cat: 'data', emoji: '📊', desc: 'Google Sheetsで売上ダッシュボード', status: 'published' },
-  { name: 'CRM管理', cat: 'crm', emoji: '💼', desc: 'Salesforce代替。顧客一元管理', status: 'published' },
+  // Published (10) — メンバーシップ公開済み基準
   { name: '経費精算', cat: 'finance', emoji: '💰', desc: '楽楽精算代替。レシートOCR対応', status: 'published' },
+  { name: 'X自動投稿', cat: 'sns', emoji: '📱', desc: 'Buffer代替。毎日自動投稿', status: 'published' },
+  { name: 'カレンダー同期', cat: 'ops', emoji: '📅', desc: 'スケジュール自動管理＋通知', status: 'published' },
+  { name: 'メール差し込み送信', cat: 'ops', emoji: '📧', desc: '一括メール配信＋テンプレート', status: 'published' },
+  { name: 'フォーム通知', cat: 'ops', emoji: '🔔', desc: 'フォーム回答をSlack・メール即通知', status: 'published' },
+  { name: 'スプシ自動バックアップ', cat: 'ops', emoji: '💾', desc: 'スプシを毎日自動バックアップ', status: 'published' },
+  { name: 'Slack通知連携', cat: 'dev', emoji: '🔔', desc: 'スプシ更新をSlackに自動通知', status: 'published' },
+  { name: '請求書自動生成', cat: 'finance', emoji: '🧾', desc: 'freee代替。PDF出力＋メール送信', status: 'published' },
+  { name: '連絡先管理', cat: 'crm', emoji: '📇', desc: '顧客・取引先の連絡先一元管理', status: 'published' },
   { name: 'タスク管理', cat: 'ops', emoji: '🎯', desc: 'Asana代替。チーム向けタスク管理', status: 'published' },
-  { name: 'メール自動送信', cat: 'ops', emoji: '📧', desc: '一括メール配信＋テンプレート', status: 'published' },
-  { name: 'カレンダー連携', cat: 'ops', emoji: '📅', desc: 'スケジュール自動管理＋通知', status: 'published' },
-  { name: 'チャットボット', cat: 'ai', emoji: '💬', desc: 'AI搭載自動応答＋FAQ対応', status: 'published' },
-  { name: '売上レポート', cat: 'data', emoji: '📈', desc: '自動集計・グラフ化・PDF出力', status: 'published' },
   // Coming soon (30+)
   { name: 'SNS予約投稿', cat: 'sns', emoji: '🗓️', desc: 'Hootsuite代替。複数SNS一括予約', status: 'coming' },
   { name: 'Instagram分析', cat: 'sns', emoji: '📸', desc: 'フォロワー推移・エンゲージメント', status: 'coming' },
@@ -49,7 +49,7 @@ const TOOLS = [
   { name: '給与計算', cat: 'hr', emoji: '💵', desc: '自動計算＋明細生成', status: 'coming' },
   { name: '採用管理', cat: 'hr', emoji: '🤝', desc: '応募者トラッキング＋面接管理', status: 'coming' },
   { name: '社内アンケート', cat: 'hr', emoji: '📋', desc: 'フォーム＋自動集計＋分析', status: 'coming' },
-  { name: '請求書自動生成', cat: 'finance', emoji: '🧾', desc: 'freee代替。PDF出力＋メール送信', status: 'coming' },
+  { name: '予実管理', cat: 'finance', emoji: '📊', desc: '予算vs実績を自動対比・レポート', status: 'coming' },
   { name: '入出金管理', cat: 'finance', emoji: '🏦', desc: '口座連携＋自動仕訳', status: 'coming' },
   { name: '予算管理', cat: 'finance', emoji: '📉', desc: '部門別予算＋実績対比', status: 'coming' },
   { name: '領収書OCR', cat: 'finance', emoji: '🧾', desc: '写真→自動テキスト抽出', status: 'coming' },
