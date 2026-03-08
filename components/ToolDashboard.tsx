@@ -1,7 +1,7 @@
 'use client'
 import { useState, useMemo } from 'react'
 
-const CURRENT_TOOLS = 10
+const CURRENT_TOOLS = 9
 const TOTAL_TOOLS = 500
 
 const CATEGORIES = [
@@ -17,18 +17,18 @@ const CATEGORIES = [
 ]
 
 const TOOLS = [
-  // Published (10) — メンバーシップ公開済み基準
-  { name: '経費精算', cat: 'finance', emoji: '💰', desc: '楽楽精算代替。レシートOCR対応', status: 'published' },
-  { name: 'X自動投稿', cat: 'sns', emoji: '📱', desc: 'Buffer代替。毎日自動投稿', status: 'published' },
-  { name: 'カレンダー同期', cat: 'ops', emoji: '📅', desc: 'スケジュール自動管理＋通知', status: 'published' },
-  { name: 'メール差し込み送信', cat: 'ops', emoji: '📧', desc: '一括メール配信＋テンプレート', status: 'published' },
-  { name: 'フォーム通知', cat: 'ops', emoji: '🔔', desc: 'フォーム回答をSlack・メール即通知', status: 'published' },
-  { name: 'スプシ自動バックアップ', cat: 'ops', emoji: '💾', desc: 'スプシを毎日自動バックアップ', status: 'published' },
-  { name: 'Slack通知連携', cat: 'dev', emoji: '🔔', desc: 'スプシ更新をSlackに自動通知', status: 'published' },
-  { name: '請求書自動生成', cat: 'finance', emoji: '🧾', desc: 'freee代替。PDF出力＋メール送信', status: 'published' },
-  { name: '連絡先管理', cat: 'crm', emoji: '📇', desc: '顧客・取引先の連絡先一元管理', status: 'published' },
-  { name: 'タスク管理', cat: 'ops', emoji: '🎯', desc: 'Asana代替。チーム向けタスク管理', status: 'published' },
-  // Coming soon (30+)
+  // Published (9) — メンバーシップ公開済み基準
+  { name: '経費精算', cat: 'finance', emoji: '💰', desc: '楽楽精算代替。レシートOCR対応', status: 'published', noteUrl: 'https://note.com/yuyukuma_gasoji/n/n6ec7dfe47d70' },
+  { name: 'X自動投稿', cat: 'sns', emoji: '📱', desc: 'Buffer代替。毎日自動投稿', status: 'published', noteUrl: 'https://note.com/yuyukuma_gasoji/n/nc1ac8441ab82' },
+  { name: 'カレンダー同期', cat: 'ops', emoji: '📅', desc: 'スケジュール自動管理＋通知', status: 'published', noteUrl: 'https://note.com/yuyukuma_gasoji/n/n618deabf2eca' },
+  { name: 'メール差し込み送信', cat: 'ops', emoji: '📧', desc: '一括メール配信＋テンプレート', status: 'published', noteUrl: 'https://note.com/yuyukuma_gasoji/n/ne90c563d5a63' },
+  { name: 'フォーム通知', cat: 'ops', emoji: '🔔', desc: 'フォーム回答をSlack・メール即通知', status: 'published', noteUrl: 'https://note.com/yuyukuma_gasoji/n/nb94ebb7e0d68' },
+  { name: 'スプシ自動バックアップ', cat: 'ops', emoji: '💾', desc: 'スプシを毎日自動バックアップ', status: 'published', noteUrl: 'https://note.com/yuyukuma_gasoji/n/n7f630985a409' },
+  { name: 'Slack通知連携', cat: 'dev', emoji: '🔔', desc: 'スプシ更新をSlackに自動通知', status: 'published', noteUrl: 'https://note.com/yuyukuma_gasoji/n/n0383924a78cb' },
+  { name: '請求書自動生成', cat: 'finance', emoji: '🧾', desc: 'freee代替。PDF出力＋メール送信', status: 'published', noteUrl: 'https://note.com/yuyukuma_gasoji/n/nc19347fafe6f' },
+  { name: '連絡先管理', cat: 'crm', emoji: '📇', desc: '顧客・取引先の連絡先一元管理', status: 'published', noteUrl: 'https://note.com/yuyukuma_gasoji/n/n4212b0a2ca10' },
+  // Coming soon (30+) — タスク管理は近日公開に移動
+  { name: 'タスク管理', cat: 'ops', emoji: '🎯', desc: 'Asana代替。チーム向けタスク管理', status: 'coming' },
   { name: 'SNS予約投稿', cat: 'sns', emoji: '🗓️', desc: 'Hootsuite代替。複数SNS一括予約', status: 'coming' },
   { name: 'Instagram分析', cat: 'sns', emoji: '📸', desc: 'フォロワー推移・エンゲージメント', status: 'coming' },
   { name: 'LINE配信管理', cat: 'sns', emoji: '💚', desc: 'LINE公式アカウント配信自動化', status: 'coming' },
@@ -144,7 +144,7 @@ export default function ToolDashboard() {
           {(showAll ? filteredTools : filteredTools.slice(0, 8)).map((tool) => (
             <div
               key={tool.name}
-              className="group rounded-2xl bg-slate-800/90 p-6 border border-white/[0.3] transition-all hover:bg-white/20 hover:border-[#FF6B35]/30 hover:-translate-y-1"
+              className="group rounded-2xl bg-slate-800/90 p-6 border border-white/[0.3] transition-all hover:bg-white/20 hover:border-[#FF6B35]/30 hover:-translate-y-1 flex flex-col"
             >
               <div className="mb-3 flex items-center justify-between">
                 <span className="text-3xl">{tool.emoji}</span>
@@ -159,7 +159,17 @@ export default function ToolDashboard() {
                 </span>
               </div>
               <h3 className="mb-1 text-lg font-black text-white">{tool.name}</h3>
-              <p className="text-sm text-white/70">{tool.desc}</p>
+              <p className="text-sm text-white/70 flex-1">{tool.desc}</p>
+              {'noteUrl' in tool && tool.noteUrl && (
+                <a
+                  href={tool.noteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-[#FF6B35] hover:text-[#ff8c5a] transition-colors"
+                >
+                  📝 詳しく見る →
+                </a>
+              )}
             </div>
           ))}
         </div>
