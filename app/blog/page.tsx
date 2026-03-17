@@ -58,11 +58,20 @@ export default function BlogPage() {
               {posts.map((post) => (
                 <article
                   key={post.slug}
-                  className="bg-gray-900 border border-gray-800 rounded-lg p-8 hover:border-[#FF6B35] transition-colors"
+                  className="bg-slate-800/90 border border-white/[0.3] rounded-lg overflow-hidden hover:border-[#FF6B35] transition-colors shadow-lg"
                 >
                   <Link href={`/blog/${post.slug}`}>
-                    <div className="space-y-4">
-                      <div className="flex items-center gap-4 text-sm text-gray-500">
+                    {post.thumbnail && (
+                      <div className="relative w-full aspect-video bg-gray-900">
+                        <img
+                          src={post.thumbnail}
+                          alt={post.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    )}
+                    <div className="p-8 space-y-4">
+                      <div className="flex items-center gap-4 text-sm text-gray-400">
                         <time dateTime={post.date}>
                           {new Date(post.date).toLocaleDateString('ja-JP', {
                             year: 'numeric',
@@ -71,11 +80,11 @@ export default function BlogPage() {
                           })}
                         </time>
                         {post.tags && post.tags.length > 0 && (
-                          <div className="flex gap-2">
+                          <div className="flex flex-wrap gap-2">
                             {post.tags.map((tag) => (
                               <span
                                 key={tag}
-                                className="bg-[#FF6B35]/10 text-[#FF6B35] px-3 py-1 rounded-full text-xs"
+                                className="bg-[#FF6B35]/10 text-[#FF6B35] px-3 py-1 rounded-full text-xs font-semibold"
                               >
                                 {tag}
                               </span>
@@ -89,13 +98,13 @@ export default function BlogPage() {
                       </h2>
 
                       {post.excerpt && (
-                        <p className="text-gray-400 line-clamp-3">
+                        <p className="text-gray-300 line-clamp-3">
                           {post.excerpt}
                         </p>
                       )}
 
-                      <div className="text-[#FF6B35] font-semibold hover:opacity-80 transition-opacity">
-                        続きを読む →
+                      <div className="text-[#FF6B35] font-semibold hover:opacity-80 transition-opacity flex items-center gap-2">
+                        続きを読む <span>→</span>
                       </div>
                     </div>
                   </Link>

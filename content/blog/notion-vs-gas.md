@@ -3,12 +3,13 @@ title: "Notion有料版を解約してGASに移行した結果【年間11,760円
 date: "2024-03-16"
 excerpt: "Notion Plusを月額980円で契約していましたが、GASに移行したら完全無料で同じことができました。具体的な移行方法と削減効果を公開します。"
 tags: ["GAS", "Notion", "コスト削減"]
+thumbnail: "/blog/notion-vs-gas.jpg"
 ogImage: "/blog/notion-vs-gas-og.png"
 ---
 
 ## Notion有料版、本当に必要ですか？
 
-私は1年間、**Notion Plusを月額980円**で契約していました。
+私は1年間、**Notion Plus**（月額980円）で契約していました。
 
 使っていた機能はこれだけ：
 - タスク管理

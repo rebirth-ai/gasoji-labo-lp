@@ -12,6 +12,7 @@ export interface BlogPost {
   excerpt: string;
   content: string;
   ogImage?: string;
+  thumbnail?: string;
   tags?: string[];
 }
 
@@ -36,6 +37,7 @@ export function getAllPosts(): BlogPost[] {
         excerpt: data.excerpt || '',
         content,
         ogImage: data.ogImage,
+        thumbnail: data.thumbnail,
         tags: data.tags || [],
       } as BlogPost;
     })
@@ -50,7 +52,13 @@ export function getPostBySlug(slug: string): BlogPost | null {
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
 
-    const htmlContent = marked(content);
+    // markedの設定: GFM（GitHub Flavored Markdown）を有効化
+    marked.setOptions({
+      gfm: true,
+      breaks: true,
+    });
+
+    const htmlContent = marked.parse(content);
 
     return {
       slug,
@@ -59,6 +67,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
       excerpt: data.excerpt || '',
       content: htmlContent as string,
       ogImage: data.ogImage,
+      thumbnail: data.thumbnail,
       tags: data.tags || [],
     };
   } catch (error) {
