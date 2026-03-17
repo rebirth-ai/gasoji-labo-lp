@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 
 const NAV_LINKS = [
+  { href: '/blog', label: 'ブログ' },
   { href: '#tools', label: 'ツール一覧' },
   { href: '#pricing', label: '料金プラン' },
   { href: '#roadmap', label: 'ロードマップ' },
