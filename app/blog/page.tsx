@@ -4,10 +4,14 @@ import { getAllPosts } from '@/lib/blog';
 export const metadata = {
   title: 'ブログ | GASおじラボ',
   description: 'GAS（Google Apps Script）の活用術、自動化テクニック、ノーコード開発のTipsをお届けします。',
+  alternates: {
+    canonical: 'https://lp.yuyukuma-blog.com/blog',
+  },
   openGraph: {
     title: 'ブログ | GASおじラボ',
     description: 'GAS（Google Apps Script）の活用術、自動化テクニック、ノーコード開発のTipsをお届けします。',
     type: 'website',
+    url: 'https://lp.yuyukuma-blog.com/blog',
   },
 };
 

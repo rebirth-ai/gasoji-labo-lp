@@ -18,14 +18,20 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     };
   }
 
+  const url = `https://lp.yuyukuma-blog.com/blog/${params.slug}`;
+
   return {
     title: `${post.title} | GASおじラボ`,
     description: post.excerpt || `${post.title}の記事`,
+    alternates: {
+      canonical: url,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt || `${post.title}の記事`,
       type: 'article',
       publishedTime: post.date,
+      url: url,
       images: post.ogImage ? [post.ogImage] : [],
     },
   };
