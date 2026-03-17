@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       type: 'article',
       publishedTime: post.date,
       url: url,
-      images: post.ogImage ? [post.ogImage] : [],
+      images: post.ogImage ? [post.ogImage] : ['https://lp.yuyukuma-blog.com/ogp.png'],
     },
   };
 }
@@ -163,7 +163,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         {/* フッター */}
         <footer className="border-t border-gray-800 mt-20 py-8">
           <div className="container mx-auto px-4 text-center text-gray-500">
-            <p>&copy; 2024 GASおじラボ. All rights reserved.</p>
+            <p>&copy; 2026 GASおじラボ. All rights reserved.</p>
           </div>
         </footer>
       </div>
