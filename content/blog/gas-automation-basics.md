@@ -4,7 +4,6 @@ date: "2024-03-17"
 excerpt: "Google Apps Script（GAS）を使った業務自動化の基本を解説します。SaaS課金から脱却して、無料で強力な自動化を実現しましょう。"
 tags: ["GAS", "自動化", "初心者向け"]
 thumbnail: "/blog/gas-automation-basics.jpg"
-ogImage: "/blog/gas-automation-basics-og.png"
 ---
 
 ## はじめに
