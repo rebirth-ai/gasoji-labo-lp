@@ -17,15 +17,15 @@ const CATEGORIES = [
 ]
 
 const TOOLS = [
-  // Published — note記事公開済み（Free版記事URLにリンク）
-  { name: '経費精算', cat: 'finance', emoji: '💰', desc: '楽楽精算代替。レシートOCR対応', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/nc20fe6c1ea38' },
-  { name: 'GASリマインダー', cat: 'ops', emoji: '⏰', desc: 'Todoist代替。タスクリマインダー', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/nb3fcc287ad61' },
-  { name: '請求書自動生成', cat: 'finance', emoji: '🧾', desc: 'freee代替。PDF出力＋メール送信', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/nf3f6d767296a' },
-  { name: 'CRM', cat: 'crm', emoji: '📇', desc: 'Salesforce代替。顧客管理を完全自動化', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/n33ce00bffa76' },
-  { name: 'GAS口コミ管理', cat: 'crm', emoji: '⭐', desc: 'Googleマップ口コミ返信自動化', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/n0be931ae9381' },
-  { name: 'タスクボード', cat: 'ops', emoji: '📋', desc: 'Trello代替。カンバンボード自動化', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/n4886b0bbc637' },
+  // Published — note記事公開済み（Pro版記事URLにリンク）
+  { name: '経費精算', cat: 'finance', emoji: '💰', desc: '楽楽精算代替。レシートOCR対応', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/nda4f0fbc2d5b' },
+  { name: 'GASリマインダー', cat: 'ops', emoji: '⏰', desc: 'Todoist代替。タスクリマインダー', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/n8458916d2ec8' },
+  { name: '請求書自動生成', cat: 'finance', emoji: '🧾', desc: 'freee代替。PDF出力＋メール送信', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/nedeed994559f' },
+  { name: 'CRM', cat: 'crm', emoji: '📇', desc: 'Salesforce代替。顧客管理を完全自動化', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/n003a0a058048' },
+  { name: 'GAS口コミ管理', cat: 'crm', emoji: '⭐', desc: 'Googleマップ口コミ返信自動化', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/n1f4f6dde6c8a' },
+  { name: 'タスクボード', cat: 'ops', emoji: '📋', desc: 'Trello代替。カンバンボード自動化', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/nf43950eedb4c' },
   { name: 'X自動投稿', cat: 'sns', emoji: '📱', desc: 'Buffer代替。AI×GASで毎日自動投稿', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/n85ded0d49ce1' },
-  // メンバーシップ限定ツール（note記事なし、メンバーシップTOPへ）
+  // メンバーシップ限定ツール（個別記事にリンク）
   { name: 'カレンダー同期', cat: 'ops', emoji: '📅', desc: 'スケジュール自動管理＋通知', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/n618deabf2eca' },
   { name: 'メール差し込み送信', cat: 'ops', emoji: '📧', desc: '一括メール配信＋テンプレート', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/ne90c563d5a63' },
   { name: 'フォーム通知', cat: 'ops', emoji: '🔔', desc: 'フォーム回答をSlack・メール即通知', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/nb94ebb7e0d68' },
