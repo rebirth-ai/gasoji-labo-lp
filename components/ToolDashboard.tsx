@@ -1,7 +1,7 @@
 'use client'
 import { useState, useMemo } from 'react'
 
-const CURRENT_TOOLS = 10
+const CURRENT_TOOLS = 13
 const TOTAL_TOOLS = 500
 
 const CATEGORIES = [
@@ -17,18 +17,26 @@ const CATEGORIES = [
 ]
 
 const TOOLS = [
-  // Published (10) — メンバーシップ公開済み基準
-  { name: '経費精算', cat: 'finance', emoji: '💰', desc: '楽楽精算代替。レシートOCR対応', status: 'published' },
-  { name: 'X自動投稿', cat: 'sns', emoji: '📱', desc: 'Buffer代替。毎日自動投稿', status: 'published' },
-  { name: 'カレンダー同期', cat: 'ops', emoji: '📅', desc: 'スケジュール自動管理＋通知', status: 'published' },
-  { name: 'メール差し込み送信', cat: 'ops', emoji: '📧', desc: '一括メール配信＋テンプレート', status: 'published' },
-  { name: 'フォーム通知', cat: 'ops', emoji: '🔔', desc: 'フォーム回答をSlack・メール即通知', status: 'published' },
-  { name: 'スプシ自動バックアップ', cat: 'ops', emoji: '💾', desc: 'スプシを毎日自動バックアップ', status: 'published' },
-  { name: 'Slack通知連携', cat: 'dev', emoji: '🔔', desc: 'スプシ更新をSlackに自動通知', status: 'published' },
-  { name: '請求書自動生成', cat: 'finance', emoji: '🧾', desc: 'freee代替。PDF出力＋メール送信', status: 'published' },
-  { name: '連絡先管理', cat: 'crm', emoji: '📇', desc: '顧客・取引先の連絡先一元管理', status: 'published' },
-  { name: 'タスク管理', cat: 'ops', emoji: '🎯', desc: 'Asana代替。チーム向けタスク管理', status: 'published' },
-  // Coming soon (30+)
+  // Published — note記事公開済み（Free版記事URLにリンク）
+  { name: '経費精算', cat: 'finance', emoji: '💰', desc: '楽楽精算代替。レシートOCR対応', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/nc20fe6c1ea38' },
+  { name: 'GASリマインダー', cat: 'ops', emoji: '⏰', desc: 'Todoist代替。タスクリマインダー', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/nb3fcc287ad61' },
+  { name: '請求書自動生成', cat: 'finance', emoji: '🧾', desc: 'freee代替。PDF出力＋メール送信', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/nf3f6d767296a' },
+  { name: 'CRM', cat: 'crm', emoji: '📇', desc: 'Salesforce代替。顧客管理を完全自動化', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/n33ce00bffa76' },
+  { name: 'GAS口コミ管理', cat: 'crm', emoji: '⭐', desc: 'Googleマップ口コミ返信自動化', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/n0be931ae9381' },
+  { name: 'タスクボード', cat: 'ops', emoji: '📋', desc: 'Trello代替。カンバンボード自動化', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/n4886b0bbc637' },
+  { name: 'X自動投稿', cat: 'sns', emoji: '📱', desc: 'Buffer代替。AI×GASで毎日自動投稿', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/n85ded0d49ce1' },
+  // メンバーシップ限定ツール（note記事なし、メンバーシップTOPへ）
+  { name: 'カレンダー同期', cat: 'ops', emoji: '📅', desc: 'スケジュール自動管理＋通知', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/n618deabf2eca' },
+  { name: 'メール差し込み送信', cat: 'ops', emoji: '📧', desc: '一括メール配信＋テンプレート', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/ne90c563d5a63' },
+  { name: 'フォーム通知', cat: 'ops', emoji: '🔔', desc: 'フォーム回答をSlack・メール即通知', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/nb94ebb7e0d68' },
+  { name: 'スプシ自動バックアップ', cat: 'ops', emoji: '💾', desc: 'スプシを毎日自動バックアップ', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/n7f630985a409' },
+  { name: 'Slack通知連携', cat: 'dev', emoji: '🔔', desc: 'Slack通知を自動化', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/n0383924a78cb' },
+  { name: '顧客連絡先管理', cat: 'crm', emoji: '📇', desc: '顧客連絡先の一元管理', status: 'published', url: 'https://note.com/yuyukuma_gasoji/n/n4212b0a2ca10' },
+  // 近日公開（note記事準備中）
+  { name: '勤怠管理', cat: 'hr', emoji: '⏰', desc: 'KING OF TIME代替。出退勤記録', status: 'upcoming' },
+  { name: 'ヘルプデスク', cat: 'ops', emoji: '🎫', desc: 'Zendesk代替。問い合わせチケット管理', status: 'upcoming' },
+  { name: 'レポート自動生成', cat: 'data', emoji: '📊', desc: 'スプシデータから自動レポート＋メール送信', status: 'upcoming' },
+  // Coming soon（開発予定）
   { name: 'SNS予約投稿', cat: 'sns', emoji: '🗓️', desc: 'Hootsuite代替。複数SNS一括予約', status: 'coming' },
   { name: 'Instagram分析', cat: 'sns', emoji: '📸', desc: 'フォロワー推移・エンゲージメント', status: 'coming' },
   { name: 'LINE配信管理', cat: 'sns', emoji: '💚', desc: 'LINE公式アカウント配信自動化', status: 'coming' },
@@ -45,7 +53,6 @@ const TOOLS = [
   { name: '見積書自動生成', cat: 'crm', emoji: '📋', desc: 'テンプレート＋PDF出力', status: 'coming' },
   { name: '顧客フォローアップ', cat: 'crm', emoji: '🔔', desc: 'フォロー漏れ防止＋自動リマインド', status: 'coming' },
   { name: '営業レポート', cat: 'crm', emoji: '📊', desc: '商談・受注率の自動集計', status: 'coming' },
-  { name: '勤怠管理', cat: 'hr', emoji: '⏰', desc: 'KING OF TIME代替。出退勤記録', status: 'coming' },
   { name: '給与計算', cat: 'hr', emoji: '💵', desc: '自動計算＋明細生成', status: 'coming' },
   { name: '採用管理', cat: 'hr', emoji: '🤝', desc: '応募者トラッキング＋面接管理', status: 'coming' },
   { name: '社内アンケート', cat: 'hr', emoji: '📋', desc: 'フォーム＋自動集計＋分析', status: 'coming' },
@@ -57,7 +64,6 @@ const TOOLS = [
   { name: 'ドキュメント自動生成', cat: 'ops', emoji: '📄', desc: 'テンプレ→契約書・提案書', status: 'coming' },
   { name: '在庫管理', cat: 'ops', emoji: '📦', desc: '在庫追跡＋発注アラート', status: 'coming' },
   { name: '日報自動化', cat: 'ops', emoji: '📓', desc: '入力→集計→上司へ自動送信', status: 'coming' },
-  { name: 'Slack連携Bot', cat: 'dev', emoji: '🔔', desc: '通知・自動返信Bot', status: 'coming' },
   { name: 'Webスクレイピング', cat: 'dev', emoji: '🕷️', desc: '競合分析・データ収集', status: 'coming' },
   { name: 'API連携ハブ', cat: 'dev', emoji: '🔗', desc: '複数サービス連携の中継点', status: 'coming' },
   { name: 'GitHub連携', cat: 'dev', emoji: '🐙', desc: 'Issue管理＋通知連携', status: 'coming' },
@@ -77,6 +83,7 @@ export default function ToolDashboard() {
   }, [activeCategory, search])
 
   const publishedCount = TOOLS.filter(t => t.status === 'published').length
+  const upcomingCount = TOOLS.filter(t => t.status === 'upcoming').length
   const comingCount = TOOLS.filter(t => t.status === 'coming').length
 
   return (
@@ -93,6 +100,7 @@ export default function ToolDashboard() {
           </p>
           <div className="mt-4 flex justify-center gap-4 text-sm">
             <span className="rounded-full bg-green-500/10 text-green-400 px-3 py-1 font-bold">✅ {publishedCount}ツール公開中</span>
+            <span className="rounded-full bg-yellow-500/10 text-yellow-400 px-3 py-1 font-bold">📝 {upcomingCount}ツール近日公開</span>
             <span className="rounded-full bg-[#FF6B35]/10 text-[#FF6B35] px-3 py-1 font-bold">🔜 {comingCount}ツール開発中</span>
             <span className="rounded-full bg-white/10 text-white/70 px-3 py-1 font-bold">🎯 目標 {TOTAL_TOOLS}ツール</span>
           </div>
@@ -141,27 +149,51 @@ export default function ToolDashboard() {
 
         {/* Tool grid */}
         <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-          {(showAll ? filteredTools : filteredTools.slice(0, 8)).map((tool) => (
-            <div
-              key={tool.name}
-              className="group rounded-2xl bg-slate-800/90 p-6 border border-white/[0.3] transition-all hover:bg-white/20 hover:border-[#FF6B35]/30 hover:-translate-y-1"
-            >
-              <div className="mb-3 flex items-center justify-between">
-                <span className="text-3xl">{tool.emoji}</span>
-                <span
-                  className={`rounded-full px-2.5 py-0.5 text-xs font-bold ${
-                    tool.status === 'published'
-                      ? 'bg-green-500/10 text-green-400'
-                      : 'bg-[#FF6B35]/10 text-[#FF6B35]'
-                  }`}
-                >
-                  {tool.status === 'published' ? '✅ 公開中' : '🔜 近日公開'}
-                </span>
+          {(showAll ? filteredTools : filteredTools.slice(0, 8)).map((tool) => {
+            const ToolCard = (
+              <div
+                className="group rounded-2xl bg-slate-800/90 p-6 border border-white/[0.3] transition-all hover:bg-white/20 hover:border-[#FF6B35]/30 hover:-translate-y-1"
+              >
+                <div className="mb-3 flex items-center justify-between">
+                  <span className="text-3xl">{tool.emoji}</span>
+                  <span
+                    className={`rounded-full px-2.5 py-0.5 text-xs font-bold ${
+                      tool.status === 'published'
+                        ? 'bg-green-500/10 text-green-400'
+                        : tool.status === 'upcoming'
+                        ? 'bg-yellow-500/10 text-yellow-400'
+                        : 'bg-[#FF6B35]/10 text-[#FF6B35]'
+                    }`}
+                  >
+                    {tool.status === 'published' ? '✅ 公開中' : tool.status === 'upcoming' ? '📝 近日公開' : '🔜 開発中'}
+                  </span>
+                </div>
+                <h3 className="mb-1 text-lg font-black text-white">{tool.name}</h3>
+                <p className="text-sm text-white/70">{tool.desc}</p>
+                {tool.url && (
+                  <div className="mt-3 text-xs font-bold text-[#FF6B35] opacity-0 group-hover:opacity-100 transition-opacity">
+                    詳細を見る →
+                  </div>
+                )}
               </div>
-              <h3 className="mb-1 text-lg font-black text-white">{tool.name}</h3>
-              <p className="text-sm text-white/70">{tool.desc}</p>
-            </div>
-          ))}
+            )
+            
+            return tool.url ? (
+              <a
+                key={tool.name}
+                href={tool.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                {ToolCard}
+              </a>
+            ) : (
+              <div key={tool.name}>
+                {ToolCard}
+              </div>
+            )
+          })}
         </div>
 
         {!showAll && filteredTools.length > 8 && (
